@@ -25,7 +25,7 @@ export default function Home() {
               Confronta i prezzi, leggi le recensioni e prenota facilmente e in <br/>
               modo trasparente i servizi di manutenzione e riparazione auto.
             </p>
-            <div className="flex justify-center items-center mt-10 mt-4 mx-4 lg:m-20 lg:mb-0">
+            <div className="flex justify-center items-center mt-14 mt-4 mx-4 lg:m-20 lg:mb-0">
               <div className="hidden lg:block">
                 <Group1 />
               </div>
