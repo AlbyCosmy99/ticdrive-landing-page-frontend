@@ -17,7 +17,7 @@ export default function Home() {
     <>
         <section id="top" className="h-full flex flex-col rounded-b-3xl min-h-screen" style={{backgroundColor: '#00BF63'}}>
           <NavBar />
-          <main className="flex flex-col justify-between items-center gap-2 flex-1 text-center text-white text-lg p-8 pb-0">
+          <main className="flex flex-col justify-between items-center gap-4 lg:gap-2 flex-1 text-center text-white text-lg p-8 pb-0">
             <div>
               <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2">
                 <span>Trova la Migliore Officina</span> <span>Vicino a Te in Pochi Click</span>
@@ -93,7 +93,7 @@ export default function Home() {
       </section>
       <section id="section5" className="bg-drive lg:h-80 m-8 lg:m-20 lg:mx-32 rounded-3xl flex flex-col lg:flex-row justify-between items-center lg:items-end p-8 lg:p-0 lg:px-20 my-14">
         <div className="self-center flex flex-col gap-6">
-          <h2 className="font-bold text-3xl lg:text-5xl text-white">Vuoi essere il primo a scoprire l&apos; app?</h2>
+          <h2 className="font-bold text-2xl lg:text-5xl text-white">Vuoi essere il primo a scoprire l&apos; app?</h2>
           <Link className="self-start" href="#registrati" passHref><SignUpButton revertStyle={true}/></Link>
         </div>
       </section>
