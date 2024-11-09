@@ -28,11 +28,11 @@ export default function Home() {
             </div>
           </main>
       </section>
-      <section id="section2" className="flex flex-col lg:flex-row justify-center items-center lg:m-12 lg:mx-24 min-h-screen">
+      <section id="section2" className="flex flex-col lg:flex-row justify-center items-center lg:m-12 lg:mx-24 min-h-screen m-8 mt-12">
         <div className="flex-1 flex gap-4 flex-col">
-          <h2 className="font-bold text-4xl"><span className="text-tic">Stiamo lanciando una</span> <span className="text-drive">App</span></h2>
+          <h2 className="font-bold text-4xl"><span className="text-tic">Stiamo lanciando un&apos;</span> <span className="text-drive">App</span></h2>
           <p className="text-tic">
-            Stiamo lanciando una app che cambierà il modo in cui ti prendi cura della tua auto. 
+            Stiamo lanciando un&apos; app che cambierà il modo in cui ti prendi cura della tua auto. 
             Che si tratti di una riparazione, un controllo o della manutenzione, ti aiutiamo a trovare l officina perfetta 
             per le tue esigenze, tutto comodamente dal tuo smartphone.
           </p>
