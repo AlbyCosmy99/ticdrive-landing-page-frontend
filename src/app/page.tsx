@@ -8,7 +8,7 @@ import HowItWorksCard from "./components/HowItWorksCard";
 export default function Home() {
   return (
     <>
-        <section id="section1" className="h-full flex flex-col rounded-b-3xl" style={{backgroundColor: '#00BF63'}}>
+        <section id="section1" className="h-full flex flex-col rounded-b-3xl min-h-screen" style={{backgroundColor: '#00BF63'}}>
           <NavBar />
           <main className="flex-1 text-center text-white text-lg p-8 pb-0">
             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2">
