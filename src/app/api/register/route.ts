@@ -1,17 +1,11 @@
 // app/api/register/route.js
 
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
-  return new Response(JSON.stringify({ data: 'post' }), {
-    status: 200,
-    headers: { 'Content-Type': 'application/json' },
-  });
-}
+  const formData = await req.formData();
+  const email = formData.get('email');
 
-export async function GET(req: NextRequest) {
-    return new Response(JSON.stringify({ data: 'get' }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
+  console.log({ message: `Received email: ${email}` })
+  return NextResponse.redirect(new URL('/', req.url), 303);
+}
