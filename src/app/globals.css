@@ -39,8 +39,10 @@ html {
   scroll-behavior: smooth;
 }
 
-.three-line-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-height: 3rem;
+@media (min-width: 1024px) {
+  .three-line-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 3rem;
+  }
 }
