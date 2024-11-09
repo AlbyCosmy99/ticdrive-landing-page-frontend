@@ -7,6 +7,7 @@ import ServicesGroup from '../../assets/servicesGroup.svg'
 import RegisterVehicleGroup from '../../assets/registerVehicleGroup.svg'
 import WorkshopsGroup from '../../assets/workshopsGroup.svg'
 import Logo from '../../assets/white_logo.svg'
+import HalfServicesGroup from '../../assets/halfServicesGroup.svg'
 
 import SignUpButton from "./components/SignUpButton";
 import HowItWorksCard from "./components/HowItWorksCard";
@@ -24,8 +25,13 @@ export default function Home() {
               Confronta i prezzi, leggi le recensioni e prenota facilmente e in <br/>
               modo trasparente i servizi di manutenzione e riparazione auto.
             </p>
-            <div className="flex justify-center items-center mt-10 m-4 lg:m-20 lg:mb-0">
-              <Group1 />
+            <div className="flex justify-center items-center mt-10 lg:m-4 lg:m-20 lg:mb-0">
+              <div className="hidden lg:block">
+                <Group1 />
+              </div>
+              <div className="block lg:hidden">
+                <HalfServicesGroup />
+              </div>
             </div>
           </main>
       </section>
@@ -51,7 +57,7 @@ export default function Home() {
         </div>
       </section>
       <section id="registrati" className="bg-drive w-full h-100 lg:h-80 flex flex-col justify-center items-center p-8 lg:p-20 lg:pr-80 gap-6 lg:pl-40">
-        <p className="text-white text-4xl font-bold lg:pr-40">
+        <p className="text-white text-3xl lg:text-4xl font-bold lg:pr-40">
           Iscriviti ora per ottenere l accesso anticipato e ricevere uno sconto speciale del 15% sulla tua prima prenotazione.
         </p>
         <form className="flex flex-col lg:flex-row items-start lg:items-center self-start gap-2">
