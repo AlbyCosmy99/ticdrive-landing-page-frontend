@@ -1,3 +1,5 @@
+"use client"
+
 import NavBar from "./components/Navbar";
 import Group2 from '../../assets/group2.svg'
 import Group2Mobile from '../../assets/group2mobile.svg'
@@ -64,7 +66,7 @@ export default function Home() {
         </p>
         <form className="flex flex-col lg:flex-row items-start lg:items-center self-start gap-2">
           <input placeholder="email" type="email" className="h-fit w-80 p-4 rounded-3xl h-full" />
-          <SignUpButton revertStyle={true} />
+          <SignUpButton onClick={() => alert("Registrazione effettuata")} revertStyle={true} />
         </form>
       </section>
       <section id="comeFunziona" className="min-h-screen flex flex-col justify-center items-center gap-12 mt-12">
