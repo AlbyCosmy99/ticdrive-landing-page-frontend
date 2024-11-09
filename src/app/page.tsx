@@ -17,10 +17,10 @@ export default function Home() {
         <section id="top" className="h-full flex flex-col rounded-b-3xl min-h-screen" style={{backgroundColor: '#00BF63'}}>
           <NavBar />
           <main className="flex-1 text-center text-white text-lg p-8 pb-0">
-            <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2">
               <span>Trova la Migliore Officina</span> <span>Vicino a Te in Pochi Click</span>
             </h1>
-            <p className="mt-3 text-xl">
+            <p className="mt-3 text-lg lg:text-xl">
               Confronta i prezzi, leggi le recensioni e prenota facilmente e in <br/>
               modo trasparente i servizi di manutenzione e riparazione auto.
             </p>
@@ -31,8 +31,8 @@ export default function Home() {
       </section>
       <section id="section2" className="flex flex-col lg:flex-row justify-center items-center lg:m-12 lg:mx-24 min-h-screen m-8 mt-12">
         <div className="flex-1 flex gap-4 flex-col">
-          <h2 className="font-bold text-5xl"><span className="text-tic">Stiamo lanciando un&apos;</span> <span className="text-drive">App</span></h2>
-          <p className="text-tic text-xl">
+          <h2 className="font-bold text-4xl lg:text-5xl"><span className="text-tic">Stiamo lanciando un&apos;</span> <span className="text-drive">App</span></h2>
+          <p className="text-tic text-lg lg:text-xl">
             Stiamo lanciando un&apos; app che cambierà il modo in cui ti prendi cura della tua auto. 
             Che si tratti di una riparazione, un controllo o della manutenzione, ti aiutiamo a trovare l officina perfetta 
             per le tue esigenze, tutto comodamente dal tuo smartphone.
