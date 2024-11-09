@@ -16,10 +16,10 @@ export default function Home() {
         <section id="top" className="h-full flex flex-col rounded-b-3xl min-h-screen" style={{backgroundColor: '#00BF63'}}>
           <NavBar />
           <main className="flex-1 text-center text-white text-lg p-8 pb-0">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2">
+            <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2">
               <span>Trova la Migliore Officina</span> <span>Vicino a Te in Pochi Click</span>
             </h1>
-            <p className="mt-3">
+            <p className="mt-3 text-xl">
               Confronta i prezzi, leggi le recensioni e prenota facilmente e in <br/>
               modo trasparente i servizi di manutenzione e riparazione auto.
             </p>
