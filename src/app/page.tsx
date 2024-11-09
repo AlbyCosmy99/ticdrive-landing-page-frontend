@@ -1,6 +1,6 @@
 import NavBar from "./components/Navbar";
 import Group2 from '../../assets/Group 35931.svg'
-import Group1 from '../../assets/Group 35933.svg'
+import Group1 from '../../assets/mainGroup.svg'
 import Group3 from '../../assets/Group 35936.svg'
 import Logo from '../../assets/white_logo.svg'
 import SignUpButton from "./components/SignUpButton";
@@ -10,7 +10,7 @@ export default function Home() {
     <>
         <section id="section1" className="h-full flex flex-col rounded-b-3xl min-h-screen" style={{backgroundColor: '#00BF63'}}>
           <NavBar />
-          <main className="flex-1 text-center text-white text-lg p-8">
+          <main className="flex-1 text-center text-white text-lg p-8 pb-0">
             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2">
               <span>Trova la Migliore Officina</span> <span>Vicino a Te in Pochi Click</span>
             </h1>
@@ -18,7 +18,7 @@ export default function Home() {
               Confronta i prezzi, leggi le recensioni e prenota facilmente e in <br/>
               modo trasparente i servizi di manutenzione e riparazione auto.
             </p>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center mt-10">
               <Group1 />
             </div>
           </main>
