@@ -1,5 +1,6 @@
 import NavBar from "./components/Navbar";
 import Group2 from '../../assets/group2.svg'
+import Group2Mobile from '../../assets/group2mobile.svg'
 import Group1 from '../../assets/mainGroup.svg'
 import Group3 from '../../assets/Group 35936.svg'
 import ServicesGroup from '../../assets/servicesGroup.svg'
@@ -27,7 +28,7 @@ export default function Home() {
             </div>
           </main>
       </section>
-      <section id="section2" className="flex flex-col lg:flex-row justify-center items-center mx-24 min-h-screen">
+      <section id="section2" className="flex flex-col lg:flex-row justify-center items-center lg:m-12 lg:mx-24 min-h-screen">
         <div className="flex-1 flex gap-4 flex-col">
           <h2 className="font-bold text-4xl"><span className="text-tic">Stiamo lanciando una</span> <span className="text-drive">App</span></h2>
           <p className="text-tic">
@@ -40,7 +41,12 @@ export default function Home() {
           </div>
         </div> 
         <div className="flex-1">
-          <Group2 />
+          <div className="block lg:hidden">
+            <Group2Mobile />
+          </div>
+          <div className="hidden lg:block">
+            <Group2 />
+          </div>
         </div>
       </section>
       <section id="registrati" className="bg-drive w-full h-100 lg:h-80 flex flex-col justify-center items-center p-8 lg:p-20 lg:pr-80 gap-6 lg:pl-40">
@@ -77,7 +83,6 @@ export default function Home() {
           <h2 className="font-bold text-3xl lg:text-5xl text-white">Vuoi essere il primo a scoprire l app?</h2>
           <a className="self-start" href="#registrati"><SignUpButton revertStyle={true}/></a>
         </div>
-        <p>image</p>
       </section>
       <footer className="bg-drive p-4 lg:p-12 lg:px-28">
         <div className="flex flex-col lg:flex-row justify-between items-center pb-4 gap-6 lg:gap-0">
