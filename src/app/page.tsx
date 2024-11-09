@@ -20,6 +20,7 @@ export default function Home() {
             </p>
             <div className="flex justify-center items-center mt-10 m-4 lg:m-20 mb-0">
               <Group1 />
+              
             </div>
           </main>
       </section>
