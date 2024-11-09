@@ -1,5 +1,3 @@
-"use client"
-
 import NavBar from "./components/Navbar";
 import Group2 from '../../assets/group2.svg'
 import Group2Mobile from '../../assets/group2mobile.svg'
@@ -14,6 +12,7 @@ import HalfServicesGroup from '../../assets/halfServicesGroup.svg'
 import SignUpButton from "./components/SignUpButton";
 import HowItWorksCard from "./components/HowItWorksCard";
 import Link from "next/link";
+
 export default function Home() {
   return (
     <>
@@ -64,9 +63,9 @@ export default function Home() {
         <p className="text-white text-3xl lg:text-4xl font-bold lg:pr-40">
           Iscriviti ora per ottenere l&apos; accesso anticipato e ricevere uno sconto speciale del 15% sulla tua prima prenotazione.
         </p>
-        <form className="flex flex-col lg:flex-row items-start lg:items-center self-start gap-2">
+        <form action="/api/register" method="POST" className="flex flex-col lg:flex-row items-start lg:items-center self-start gap-2">
           <input placeholder="email" type="email" className="h-fit w-80 p-4 rounded-3xl h-full" />
-          <SignUpButton onClick={() => alert("Registrazione effettuata")} revertStyle={true} />
+          <SignUpButton revertStyle={true} />
         </form>
       </section>
       <section id="comeFunziona" className="min-h-screen flex flex-col justify-center items-center gap-12 mt-12">
