@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </section>
       <section id="registrati" className="bg-drive w-full h-100 lg:h-80 flex flex-col justify-center items-center p-8 lg:p-20 lg:pr-80 gap-6 lg:pl-40">
-        <p className="text-white text-4xl font-bold pr-40">
+        <p className="text-white text-4xl font-bold lg:pr-40">
           Iscriviti ora per ottenere l accesso anticipato e ricevere uno sconto speciale del 15% sulla tua prima prenotazione.
         </p>
         <form className="flex flex-col lg:flex-row items-start lg:items-center self-start gap-2">
@@ -83,7 +83,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id="section5" className="bg-drive h-80 m-8 lg:m-20 lg:mx-32 rounded-3xl flex flex-col lg:flex-row justify-between items-center lg:items-end p-8 lg:p-0 lg:px-20">
+      <section id="section5" className="bg-drive lg:h-80 m-8 lg:m-20 lg:mx-32 rounded-3xl flex flex-col lg:flex-row justify-between items-center lg:items-end p-8 lg:p-0 lg:px-20">
         <div className="self-center flex flex-col gap-6">
           <h2 className="font-bold text-3xl lg:text-5xl text-white">Vuoi essere il primo a scoprire l app?</h2>
           <Link className="self-start" href="#registrati" passHref><SignUpButton revertStyle={true}/></Link>
