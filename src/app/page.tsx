@@ -10,6 +10,7 @@ import Logo from '../../assets/white_logo.svg'
 
 import SignUpButton from "./components/SignUpButton";
 import HowItWorksCard from "./components/HowItWorksCard";
+import Link from "next/link";
 export default function Home() {
   return (
     <>
@@ -30,14 +31,14 @@ export default function Home() {
       </section>
       <section id="section2" className="flex flex-col lg:flex-row justify-center items-center lg:m-12 lg:mx-24 min-h-screen m-8 mt-12">
         <div className="flex-1 flex gap-4 flex-col">
-          <h2 className="font-bold text-4xl"><span className="text-tic">Stiamo lanciando un&apos;</span> <span className="text-drive">App</span></h2>
-          <p className="text-tic">
+          <h2 className="font-bold text-5xl"><span className="text-tic">Stiamo lanciando un&apos;</span> <span className="text-drive">App</span></h2>
+          <p className="text-tic text-xl">
             Stiamo lanciando un&apos; app che cambierà il modo in cui ti prendi cura della tua auto. 
             Che si tratti di una riparazione, un controllo o della manutenzione, ti aiutiamo a trovare l officina perfetta 
             per le tue esigenze, tutto comodamente dal tuo smartphone.
           </p>
           <div className="self-start">
-            <a href="#registrati"><SignUpButton /></a>
+            <Link href="#registrati" passHref><SignUpButton /></Link>
           </div>
         </div> 
         <div className="flex-1">
@@ -50,7 +51,7 @@ export default function Home() {
         </div>
       </section>
       <section id="registrati" className="bg-drive w-full h-100 lg:h-80 flex flex-col justify-center items-center p-8 lg:p-20 lg:pr-80 gap-6 lg:pl-40">
-        <p className="text-white text-3xl font-bold pr-40">
+        <p className="text-white text-4xl font-bold pr-40">
           Iscriviti ora per ottenere l accesso anticipato e ricevere uno sconto speciale del 15% sulla tua prima prenotazione.
         </p>
         <form className="flex flex-col lg:flex-row items-start lg:items-center self-start gap-2">
@@ -59,7 +60,11 @@ export default function Home() {
         </form>
       </section>
       <section id="comeFunziona" className="min-h-screen flex flex-col justify-center items-center gap-12 mt-12">
-        <a href="#comeFunziona"><h2 className="font-bold text-4xl"><span className="text-tic">Come</span> <span className="text-drive">funziona</span></h2></a>
+        <Link href="#comeFunziona">
+          <h2 className="font-bold text-4xl">
+            <span className="text-tic">Come</span> <span className="text-drive">funziona</span>
+          </h2>
+        </Link>
         <div className="flex flex-col xl:flex-row justify-center items-center gap-20">
           <HowItWorksCard 
             title="Scegli il servizio" 
@@ -81,17 +86,17 @@ export default function Home() {
       <section id="section5" className="bg-drive h-80 m-8 lg:m-20 lg:mx-32 rounded-3xl flex flex-col lg:flex-row justify-between items-center lg:items-end p-8 lg:p-0 lg:px-20">
         <div className="self-center flex flex-col gap-6">
           <h2 className="font-bold text-3xl lg:text-5xl text-white">Vuoi essere il primo a scoprire l app?</h2>
-          <a className="self-start" href="#registrati"><SignUpButton revertStyle={true}/></a>
+          <Link className="self-start" href="#registrati" passHref><SignUpButton revertStyle={true}/></Link>
         </div>
       </section>
       <footer className="bg-drive p-4 lg:p-12 lg:px-28">
         <div className="flex flex-col lg:flex-row justify-between items-center pb-4 gap-6 lg:gap-0">
           <Logo />
           <h2 className="font-bold text-2xl lg:text-4xl text-white">Prenota, risparmia, riparti!</h2>
-          <a className="flex gap-3 justify-center items-center" href="#top">
-            <p className="text-white">Torna all inizio</p>
+          <Link className="flex gap-3 justify-center items-center" href="#top" passHref>
+            <p className="text-white text-lg">Torna all inizio</p>
             <Group3 />
-          </a>
+          </Link>
         </div>
         <hr className="bg-white w-full"/>
         <p className="text-white text-center pt-4 text-sm">Copyright - All Right Reserved</p>
