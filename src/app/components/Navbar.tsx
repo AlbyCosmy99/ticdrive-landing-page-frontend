@@ -6,7 +6,7 @@ const NavBar = () => {
             <div className='m-1'>
                 <Logo /> 
             </div>
-            <a href='#section3'><SignUpButton /></a>
+            <a href='#registrati'><SignUpButton /></a>
         </div>
     )
 }
