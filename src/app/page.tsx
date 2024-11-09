@@ -89,7 +89,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id="section5" className="bg-drive lg:h-80 m-8 lg:m-20 lg:mx-32 rounded-3xl flex flex-col lg:flex-row justify-between items-center lg:items-end p-8 lg:p-0 lg:px-20">
+      <section id="section5" className="bg-drive lg:h-80 m-8 lg:m-20 lg:mx-32 rounded-3xl flex flex-col lg:flex-row justify-between items-center lg:items-end p-8 lg:p-0 lg:px-20 my-14">
         <div className="self-center flex flex-col gap-6">
           <h2 className="font-bold text-3xl lg:text-5xl text-white">Vuoi essere il primo a scoprire l app?</h2>
           <Link className="self-start" href="#registrati" passHref><SignUpButton revertStyle={true}/></Link>
