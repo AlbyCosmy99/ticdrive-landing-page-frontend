@@ -40,7 +40,7 @@ export default function Home() {
           <h2 className="font-bold text-4xl lg:text-5xl"><span className="text-tic">Stiamo lanciando un&apos;</span> <span className="text-drive">App</span></h2>
           <p className="text-tic text-lg lg:text-xl">
             Stiamo lanciando un&apos; app che cambierà il modo in cui ti prendi cura della tua auto. 
-            Che si tratti di una riparazione, un controllo o della manutenzione, ti aiutiamo a trovare l officina perfetta 
+            Che si tratti di una riparazione, un controllo o della manutenzione, ti aiutiamo a trovare l&apos; officina perfetta 
             per le tue esigenze, tutto comodamente dal tuo smartphone.
           </p>
           <div className="self-start">
@@ -58,7 +58,7 @@ export default function Home() {
       </section>
       <section id="registrati" className="bg-drive w-full h-100 lg:h-80 flex flex-col justify-center items-center p-8 lg:p-20 lg:pr-80 gap-6 lg:pl-40">
         <p className="text-white text-3xl lg:text-4xl font-bold lg:pr-40">
-          Iscriviti ora per ottenere l accesso anticipato e ricevere uno sconto speciale del 15% sulla tua prima prenotazione.
+          Iscriviti ora per ottenere l&apos; accesso anticipato e ricevere uno sconto speciale del 15% sulla tua prima prenotazione.
         </p>
         <form className="flex flex-col lg:flex-row items-start lg:items-center self-start gap-2">
           <input placeholder="email" type="email" className="h-fit w-80 p-4 rounded-3xl h-full" />
@@ -79,7 +79,7 @@ export default function Home() {
           />
           <HowItWorksCard 
             title="Registra la tua auto" 
-            description="Registra la tua auto tramite targa o per marca e modello."
+            description="Registra la tua auto tramite targa, marca o modello."
             svg={RegisterVehicleGroup}
           />
           <HowItWorksCard 
@@ -91,7 +91,7 @@ export default function Home() {
       </section>
       <section id="section5" className="bg-drive lg:h-80 m-8 lg:m-20 lg:mx-32 rounded-3xl flex flex-col lg:flex-row justify-between items-center lg:items-end p-8 lg:p-0 lg:px-20 my-14">
         <div className="self-center flex flex-col gap-6">
-          <h2 className="font-bold text-3xl lg:text-5xl text-white">Vuoi essere il primo a scoprire l app?</h2>
+          <h2 className="font-bold text-3xl lg:text-5xl text-white">Vuoi essere il primo a scoprire l&apos; app?</h2>
           <Link className="self-start" href="#registrati" passHref><SignUpButton revertStyle={true}/></Link>
         </div>
       </section>
@@ -100,12 +100,12 @@ export default function Home() {
           <Logo />
           <h2 className="font-bold text-2xl lg:text-4xl text-white">Prenota, risparmia, riparti!</h2>
           <Link className="flex gap-3 justify-center items-center" href="#top" passHref>
-            <p className="text-white text-lg">Torna all inizio</p>
+            <p className="text-white text-lg">Torna all&apos; inizio</p>
             <Group3 />
           </Link>
         </div>
         <hr className="bg-white w-full"/>
-        <p className="text-white text-center pt-4 text-sm">Copyright - All Right Reserved</p>
+        <p className="text-white text-center pt-4 text-sm">&copy; Copyright - All Rights Reserved</p>
       </footer>
     </>
   );
