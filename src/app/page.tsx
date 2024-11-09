@@ -17,14 +17,16 @@ export default function Home() {
     <>
         <section id="top" className="h-full flex flex-col rounded-b-3xl min-h-screen" style={{backgroundColor: '#00BF63'}}>
           <NavBar />
-          <main className="flex-1 text-center text-white text-lg p-8 pb-0">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2">
-              <span>Trova la Migliore Officina</span> <span>Vicino a Te in Pochi Click</span>
-            </h1>
-            <p className="mt-3 text-lg lg:text-xl">
-              Confronta i prezzi, leggi le recensioni e prenota facilmente e in <br/>
-              modo trasparente i servizi di manutenzione e riparazione auto.
-            </p>
+          <main className="flex flex-col justify-between items-center gap-2 flex-1 text-center text-white text-lg p-8 pb-0">
+            <div>
+              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2">
+                <span>Trova la Migliore Officina</span> <span>Vicino a Te in Pochi Click</span>
+              </h1>
+              <p className="mt-3 text-lg lg:text-xl">
+                Confronta i prezzi, leggi le recensioni e prenota facilmente e in <br/>
+                modo trasparente i servizi di manutenzione e riparazione auto.
+              </p>
+            </div>
             <div className="flex justify-center items-center mt-14 mt-4 mx-4 lg:m-20 lg:mb-0">
               <div className="hidden lg:block">
                 <Group1 />
@@ -48,10 +50,10 @@ export default function Home() {
           </div>
         </div> 
         <div className="flex-1">
-          <div className="block lg:hidden">
+          <div className="block md:hidden">
             <Group2Mobile />
           </div>
-          <div className="hidden lg:block">
+          <div className="hidden md:block">
             <Group2 />
           </div>
         </div>
