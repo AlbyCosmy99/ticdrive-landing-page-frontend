@@ -14,6 +14,10 @@ export default {
         drive: "#00BF63",
         tic: "#737373"
       },
+      screens: {
+        'max-lg': {'max': '1300px'},
+        'max-md': {'max': '1000px'},
+      },
     },
   },
   plugins: [],

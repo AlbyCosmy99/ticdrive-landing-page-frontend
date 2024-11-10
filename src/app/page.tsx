@@ -8,6 +8,7 @@ import RegisterVehicleGroup from '../../assets/registerVehicleGroup.svg'
 import WorkshopsGroup from '../../assets/workshopsGroup.svg'
 import Logo from '../../assets/white_logo.svg'
 import HalfServicesGroup from '../../assets/halfServicesGroup.svg'
+import MiddleScreensGroup from '../../assets/middleScreensGroup.svg'
 
 import SignUpButton from "./components/SignUpButton";
 import HowItWorksCard from "./components/HowItWorksCard";
@@ -28,14 +29,24 @@ export default function Home() {
                 modo trasparente i servizi di manutenzione e riparazione auto.
               </p>
             </div>
-            <div className="flex justify-center items-center mt-14 mt-4 mx-4 lg:m-20 lg:mb-0">
-              <div className="hidden lg:block">
+            <div className="flex justify-center items-center mt-4 mx-4 lg:mt-14 lg:mx-20 lg:mb-0">
+              {/* Display on screens above 1300px */}
+              <div className="hidden lg:block max-lg:hidden">
                 <Group1 />
               </div>
-              <div className="block lg:hidden">
+
+              {/* Display on screens between 1000px and 1300px */}
+              <div className="max-lg:block hidden max-md:hidden">
+                <MiddleScreensGroup />
+              </div>
+
+              {/* Display on screens below 1000px */}
+              <div className="max-md:block hidden">
                 <HalfServicesGroup />
               </div>
             </div>
+
+
           </main>
       </section>
       <section id="section2" className="flex flex-col lg:flex-row justify-center items-center lg:m-12 lg:mx-24 min-h-screen m-8 mt-12">
