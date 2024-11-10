@@ -6,7 +6,7 @@ import Group3 from '../../assets/Group 35936.svg';
 import ServicesGroup from '../../assets/servicesGroup.svg';
 import RegisterVehicleGroup from '../../assets/registerVehicleGroup.svg';
 import WorkshopsGroup from '../../assets/workshopsGroup.svg';
-import Logo from '../../assets/white_logo.svg';
+import Logo from '../../assets/logo.svg';
 import HalfServicesGroup from '../../assets/halfServicesGroup.svg';
 import MiddleScreensGroup from '../../assets/middleScreensGroup.svg';
 
@@ -142,20 +142,24 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <footer className="bg-drive p-4 lg:p-12 lg:px-28">
-        <div className="flex flex-col lg:flex-row justify-between items-center pb-4 gap-6 lg:gap-0">
-          <Logo />
-          <h2 className="font-bold text-2xl lg:text-4xl text-white">
-            Prenota, risparmia, riparti!
-          </h2>
-          <Link
-            className="flex gap-3 justify-center items-center"
-            href="#top"
-            passHref
-          >
-            <p className="text-white text-lg">Torna all&apos; inizio</p>
-            <Group3 />
-          </Link>
+      <footer className="bg-drive py-4">
+        <div className="bg-white flex justify-between items-center my-6 pr-6 pl-5 lg:px-20">
+          <div className="flex flex-col lg:flex-row justify-between items-center py-2 gap-6 lg:gap-0 w-full">
+            <Link className="m-1" href="/" passHref>
+              <Logo />
+            </Link>
+            <h2 className="font-bold text-2xl lg:text-4xl text-drive">
+              Prenota, risparmia, riparti!
+            </h2>
+            <Link
+              className="flex gap-3 justify-center items-center"
+              href="#top"
+              passHref
+            >
+              <p className="text-drive text-lg">Torna all&apos; inizio</p>
+              <Group3 />
+            </Link>
+          </div>
         </div>
         <hr className="bg-white w-full" />
         <p className="text-white text-center pt-4 text-sm">
