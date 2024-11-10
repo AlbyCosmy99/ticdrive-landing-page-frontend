@@ -137,9 +137,24 @@ export default function Home() {
           <h2 className="font-bold text-2xl lg:text-5xl text-white">
             Vuoi essere il primo a scoprire l&apos; app?
           </h2>
-          <Link className="self-start" href="#registrati" passHref>
+          <p className="text-white text-2xl lg:text-3xl lg:pr-40">
+            Iscriviti ora per ottenere l&apos; accesso anticipato e ricevere uno
+            sconto speciale del 15% sulla tua prima prenotazione.
+          </p>
+          <form
+            action="/api/register"
+            method="POST"
+            className="flex flex-col lg:flex-row items-start lg:items-center self-start gap-2"
+          >
+            <input
+              name="email"
+              placeholder="email"
+              type="email"
+              className="h-fit w-80 p-4 rounded-3xl h-full"
+              required
+            />
             <SignUpButton revertStyle={true} />
-          </Link>
+          </form>
         </div>
       </section>
       <footer className="bg-drive py-4">
