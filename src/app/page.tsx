@@ -144,7 +144,6 @@ export default function Home() {
         </div>
       </section>
       <footer className="bg-drive ">
-        <NavBar />
         <hr className="bg-white w-full" />
         <p className="text-white text-center pt-4 text-sm">
           &copy; Copyright - All Rights Reserved

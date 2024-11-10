@@ -6,10 +6,13 @@ import nodemailer from 'nodemailer'
 export async function POST(req: NextRequest) {
   const formData = await req.formData();
   const email = formData.get('email');
-  sendEmail(email)
 
-  console.log({message: 'Received', email: email});
-  return NextResponse.redirect(new URL('/', req.url), 303);
+  if (typeof email === 'string') {
+    sendEmail(email);
+    return NextResponse.redirect(new URL('/', req.url), 303);
+  } else {
+    return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
+  }
 }
 
 function sendEmail(email: string) {
