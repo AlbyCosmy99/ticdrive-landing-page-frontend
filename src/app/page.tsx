@@ -141,20 +141,9 @@ export default function Home() {
             Iscriviti ora per ottenere l&apos; accesso anticipato e ricevere uno
             sconto speciale del 15% sulla tua prima prenotazione.
           </p>
-          <form
-            action="/api/register"
-            method="POST"
-            className="flex flex-col lg:flex-row items-start lg:items-center self-start gap-2"
-          >
-            <input
-              name="email"
-              placeholder="email"
-              type="email"
-              className="h-fit w-80 p-4 rounded-3xl h-full"
-              required
-            />
+          <Link className="self-start" href="#registrati" passHref>
             <SignUpButton revertStyle={true} />
-          </form>
+          </Link>
         </div>
       </section>
       <footer className="bg-drive py-4">
