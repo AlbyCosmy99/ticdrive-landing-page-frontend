@@ -146,8 +146,8 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <footer className="bg-drive py-4">
-        <div className="bg-white flex justify-between items-center my-6 pr-6 pl-5 lg:px-20">
+      <footer className="bg-drive ">
+        <div className="bg-white flex justify-between items-center  pr-6 pl-5 lg:px-20">
           <div className="flex flex-col lg:flex-row justify-between items-center py-2 gap-6 lg:gap-0 w-full">
             <Link className="m-1" href="/" passHref>
               <Logo />
