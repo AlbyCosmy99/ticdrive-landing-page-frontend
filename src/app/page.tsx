@@ -30,18 +30,13 @@ export default function Home() {
               </p>
             </div>
             <div className="flex justify-center items-center mt-4 mx-4 lg:mt-14 lg:mx-20 lg:mb-0">
-              {/* Display on screens above 1300px */}
               <div className="hidden lg:block max-lg:hidden">
                 <Group1 />
               </div>
-
-              {/* Display on screens between 1000px and 1300px */}
-              <div className="max-lg:block hidden max-md:hidden">
+              <div className="hidden max-lg:block max-md:hidden">
                 <MiddleScreensGroup />
               </div>
-
-              {/* Display on screens below 1000px */}
-              <div className="max-md:block hidden">
+              <div className="hidden max-md:block">
                 <HalfServicesGroup />
               </div>
             </div>
