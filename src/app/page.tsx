@@ -60,7 +60,7 @@ export default function Home() {
             trova l&apos; officina ideale per riparazioni e manutenzione,
             e prenota comodamente da smartphone o pc.
           </p>
-          <div className="self-start">
+          <div className="self-center">
             <Link href="#registrati" passHref>
               <SignUpButton />
             </Link>
