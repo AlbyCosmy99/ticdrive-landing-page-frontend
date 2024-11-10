@@ -53,15 +53,14 @@ export default function Home() {
         className="flex flex-col lg:flex-row justify-center items-center lg:m-12 lg:mx-24 min-h-screen m-8 mt-12"
       >
         <div className="flex-1 flex gap-4 flex-col">
-          <h2 className="font-bold text-4xl lg:text-5xl">
+          <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl">
             <span className="text-tic">Stiamo lanciando un&apos;</span>{' '}
             <span className="text-drive">App</span>
           </h2>
           <p className="text-tic text-lg lg:text-xl">
-            Stiamo lanciando un&apos; app che cambierà il modo in cui ti prendi
-            cura della tua auto. Che si tratti di una riparazione, un controllo
-            o della manutenzione, ti aiutiamo a trovare l&apos; officina
-            perfetta per le tue esigenze, tutto comodamente dal tuo smartphone.
+          Un&apos; <span className='text-drive'>app innovativa</span> per la cura dell&apos; auto:
+          trova l&apos; officina ideale per riparazioni e manutenzione,
+          e prenota comodamente da smartphone o pc.
           </p>
           <div className="self-start">
             <Link href="#registrati" passHref>
@@ -70,10 +69,10 @@ export default function Home() {
           </div>
         </div>
         <div className="flex-1">
-          <div className="block md:hidden">
+          <div className="max-lg:block hidden">
             <Group2Mobile />
           </div>
-          <div className="hidden md:block">
+          <div className="max-lg:hidden block">
             <Group2 />
           </div>
         </div>
@@ -114,17 +113,17 @@ export default function Home() {
         <div className="flex flex-col xl:flex-row justify-center items-center gap-20">
           <HowItWorksCard
             title="Scegli il servizio"
-            description="Scegli tra riparazione, manutenzione o ispezione."
+            description="Scegli tra tagliando, revisione o cambio olio."
             svg={ServicesGroup}
           />
           <HowItWorksCard
             title="Registra la tua auto"
-            description="Registra la tua auto tramite targa, marca o modello."
+            description="Registra la tua auto tramite targa, o marca e modello."
             svg={RegisterVehicleGroup}
           />
           <HowItWorksCard
             title="Confronta e prenota"
-            description="Scopri le migliori officine, confronta prezzi e recensioni e prenota in pochi clic."
+            description="Prenota l'officina in base a prezzo, recensioni o distanza."
             svg={WorkshopsGroup}
           />
         </div>
@@ -147,24 +146,7 @@ export default function Home() {
         </div>
       </section>
       <footer className="bg-drive ">
-        <div className="bg-white flex justify-between items-center  pr-6 pl-5 lg:px-20">
-          <div className="flex flex-col lg:flex-row justify-between items-center py-2 gap-6 lg:gap-0 w-full">
-            <Link className="m-1" href="/" passHref>
-              <Logo />
-            </Link>
-            <h2 className="font-bold text-2xl lg:text-4xl text-drive">
-              Prenota, risparmia, riparti!
-            </h2>
-            <Link
-              className="flex gap-3 justify-center items-center"
-              href="#top"
-              passHref
-            >
-              <p className="text-drive text-lg">Torna all&apos; inizio</p>
-              <Group3 />
-            </Link>
-          </div>
-        </div>
+        <NavBar />
         <hr className="bg-white w-full" />
         <p className="text-white text-center pt-4 text-sm">
           &copy; Copyright - All Rights Reserved
