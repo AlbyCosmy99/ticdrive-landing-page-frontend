@@ -18,19 +18,19 @@ export async function POST(req: NextRequest) {
 
 async function sendEmail(email: string) {
   // Set up transporter with Gmail SMTP
+  
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
+    host: 'smtp.mail.me.com', // iCloud SMTP server
+    port: 587, // Standard SMTP port
+    secure: false, // True for 465, false for other ports
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
+      user: 'dinamo1999@icloud.com', // Your iCloud email
+      pass: 'kpyy-vnii-vxut-tdfn', // App-specific password generated from Apple ID account page
     },
   });
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,
+    from: 'dinamo1999@icloud.com',
     to: email,
     subject: 'Benvenuto!',
     text: 'TicDrive',
