@@ -2,11 +2,9 @@ import NavBar from './components/Navbar';
 import Group2 from '../../assets/group2.svg';
 import Group2Mobile from '../../assets/group2mobile.svg';
 import Group1 from '../../assets/mainGroup.svg';
-import Group3 from '../../assets/Group 35936.svg';
 import ServicesGroup from '../../assets/servicesGroup.svg';
 import RegisterVehicleGroup from '../../assets/registerVehicleGroup.svg';
 import WorkshopsGroup from '../../assets/workshopsGroup.svg';
-import Logo from '../../assets/logo.svg';
 import HalfServicesGroup from '../../assets/halfServicesGroup.svg';
 import MiddleScreensGroup from '../../assets/middleScreensGroup.svg';
 
