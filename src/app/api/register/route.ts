@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
   const email = formData.get('email');
 
   if (typeof email === 'string') {
-    sendEmail(email);
+    await sendEmail(email);
     return NextResponse.redirect(new URL('/', req.url), 303);
   } else {
     return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
@@ -16,11 +16,11 @@ export async function POST(req: NextRequest) {
 }
 
 
-function sendEmail(email: string) {
+async function sendEmail(email: string) {
   // Set up transporter with Gmail SMTP
   const transporter = nodemailer.createTransport({
     service: 'gmail',
-    host: 'smtp.sendgrid.net',
+    host: 'smtp.gmail.com',
     port: 465,
     secure: true,
     auth: {
