@@ -17,8 +17,14 @@ import Link from 'next/link';
 export default function Home() {
 
   const fetchData = async () => {
-    fetch("localhost:3030/api/users/mails/send-verification", {
-      method: 'POST'
+    fetch("https://my-reader-journey-backend-1.onrender.com/api/users/mails/send-verification", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: "dinamo1999@icloud.com"
+      })
     }).then(res => res.json())
     .then(res => {
       console.log(res)
