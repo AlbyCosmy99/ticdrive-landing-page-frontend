@@ -1,9 +1,9 @@
 // app/api/register/route.js
 
-import {NextRequest, NextResponse} from 'next/server';
+import { NextResponse} from 'next/server';
 import nodemailer from 'nodemailer'
 
-export async function POST(req: NextRequest) {
+export async function POST() {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
