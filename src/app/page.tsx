@@ -13,8 +13,10 @@ import MiddleScreensGroup from '../../assets/middleScreensGroup.svg';
 import SignUpButton from './components/SignUpButton';
 import HowItWorksCard from './components/HowItWorksCard';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Home() {
+  const [email, setEmail] = useState("")
 
   const fetchData = async () => {
     fetch("https://my-reader-journey-backend-1.onrender.com/api/users/mails/send-verification", {
@@ -23,7 +25,7 @@ export default function Home() {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        email: "dinamo1999@icloud.com"
+        email: email
       })
     }).then(res => res.json())
     .then(res => {
@@ -105,11 +107,14 @@ export default function Home() {
           onSubmit={(event) => {
             event.preventDefault()
             fetchData()
+            setEmail("")
           }}
         >
           <input
             placeholder="email"
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="h-fit w-80 p-4 rounded-3xl h-full"
             required
           />
