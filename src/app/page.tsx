@@ -13,22 +13,9 @@ import MiddleScreensGroup from '../../assets/middleScreensGroup.svg';
 import SignUpButton from './components/SignUpButton';
 import HowItWorksCard from './components/HowItWorksCard';
 import Link from 'next/link';
-import { useEffect } from 'react';
 
 export default function Home() {
 
-  const fetchData = async () => {
-    fetch("api/register", {
-      method: 'POST'
-    }).then(res => res.json())
-    .then(res => {
-      console.log(res)
-    })
-  }
-
-  useEffect(() => {
-    fetchData()
-  })
   return (
     <>
       <section
@@ -37,7 +24,6 @@ export default function Home() {
         style={{backgroundColor: '#00BF63'}}
       >
         <NavBar />
-        <button onClick={() => fetchData()}>fetch</button>
         <main className="flex flex-col justify-between items-center gap-4 lg:gap-2 flex-1 text-center text-white text-lg p-8 pb-0">
           <div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2">

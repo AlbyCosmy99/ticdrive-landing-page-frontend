@@ -4,30 +4,24 @@ import {NextRequest, NextResponse} from 'next/server';
 import nodemailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
-  // const formData = await req.formData();
-  // const email = formData.get('email');
-
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'newsletter.ticdrive@gmail.com',
+      pass: 'zlfz fkxz lihh zcsf',
+    },
+  });
   const email = "dinamo1999@icloud.com"
+  const verificationCode = Math.floor(100000 + Math.random() * 900000); // Generate a 6-digit code
 
-  if (typeof email === 'string') {
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      host: 'smtp.gmail.com',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-    await transporter.sendMail({
-      from: 'newsletter.ticdrive@gmail.com',
-      to: email,
-      subject: 'Your Verification Code',
-      text: `Your verification code is: ${1234}`,
-    });
-    return NextResponse.redirect(new URL('/', req.url), 303);
-  } else {
-    return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
-  }
+  await transporter.sendMail({
+    from: 'newsletter.ticdrive@gmail.com',
+    to: email,
+    subject: 'Your Verification Code',
+    text: `Your verification code is: ${verificationCode}`,
+  });
+
+  return NextResponse.json({ code: verificationCode });
 }
 
 
