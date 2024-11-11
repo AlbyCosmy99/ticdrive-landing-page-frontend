@@ -19,7 +19,7 @@ export default function Home() {
   const [email, setEmail] = useState("")
 
   const fetchData = async () => {
-    fetch("https://my-reader-journey-backend-1.onrender.com/api/users/mails/send-verification", {
+    fetch(`https://landing-page-users-ticdrive-backend.onrender.com/api/mail/subscription`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
