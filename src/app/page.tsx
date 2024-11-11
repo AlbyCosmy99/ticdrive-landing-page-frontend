@@ -1,3 +1,5 @@
+"use client"
+
 import NavBar from './components/Navbar';
 import Group2 from '../../assets/group2.svg';
 import Group2Mobile from '../../assets/group2mobile.svg';
@@ -11,8 +13,22 @@ import MiddleScreensGroup from '../../assets/middleScreensGroup.svg';
 import SignUpButton from './components/SignUpButton';
 import HowItWorksCard from './components/HowItWorksCard';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 export default function Home() {
+
+  const fetchData = async () => {
+    fetch("api/register", {
+      method: 'POST'
+    }).then(res => res.json())
+    .then(res => {
+      console.log(res)
+    })
+  }
+
+  useEffect(() => {
+    fetchData()
+  })
   return (
     <>
       <section
