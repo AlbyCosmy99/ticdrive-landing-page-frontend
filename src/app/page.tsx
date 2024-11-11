@@ -1,3 +1,5 @@
+"use client"
+
 import NavBar from './components/Navbar';
 import Group2 from '../../assets/group2.svg';
 import Group2Mobile from '../../assets/group2mobile.svg';
@@ -13,6 +15,15 @@ import HowItWorksCard from './components/HowItWorksCard';
 import Link from 'next/link';
 
 export default function Home() {
+
+  const fetchData = async () => {
+    fetch("api/register", {
+      method: 'POST'
+    }).then(res => res.json())
+    .then(res => {
+      console.log(res)
+    })
+  }
   return (
     <>
       <section
@@ -84,9 +95,8 @@ export default function Home() {
           sconto speciale del 15% sulla tua prima prenotazione.
         </p>
         <form
-          action="/api/register"
-          method="POST"
           className="flex flex-col lg:flex-row items-start lg:items-center self-start gap-2"
+          onSubmit={() => fetchData()}
         >
           <input
             name="email"

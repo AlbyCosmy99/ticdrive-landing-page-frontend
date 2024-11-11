@@ -4,15 +4,8 @@ import {NextRequest, NextResponse} from 'next/server';
 import nodemailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
-  const formData = await req.formData();
-  const email = formData.get('email');
-  console.log(email)
-  if (typeof email === 'string') {
-    await sendEmail(email);
-    return NextResponse.redirect(new URL('/', req.url), 303);
-  } else {
-    return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
-  }
+  await sendEmail("dinamo1999@icloud.com");
+  return NextResponse.redirect(new URL('/', req.url), 303);
 }
 
 
