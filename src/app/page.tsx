@@ -17,7 +17,7 @@ import Link from 'next/link';
 export default function Home() {
 
   const fetchData = async () => {
-    fetch("api/register", {
+    fetch("localhost:3030/api/users/mails/send-verification", {
       method: 'POST'
     }).then(res => res.json())
     .then(res => {
@@ -96,10 +96,12 @@ export default function Home() {
         </p>
         <form
           className="flex flex-col lg:flex-row items-start lg:items-center self-start gap-2"
-          onSubmit={() => fetchData()}
+          onSubmit={(event) => {
+            event.preventDefault()
+            fetchData()
+          }}
         >
           <input
-            name="email"
             placeholder="email"
             type="email"
             className="h-fit w-80 p-4 rounded-3xl h-full"
