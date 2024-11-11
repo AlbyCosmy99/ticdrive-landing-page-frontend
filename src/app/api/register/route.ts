@@ -1,9 +1,9 @@
 // app/api/register/route.js
 
-import { NextResponse} from 'next/server';
+import { NextRequest, NextResponse} from 'next/server';
 import nodemailer from 'nodemailer'
 
-export async function POST() {
+export async function POST(req: NextRequest) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -21,7 +21,7 @@ export async function POST() {
     text: `Your verification code is: ${verificationCode}`,
   });
 
-  return NextResponse.json({ code: verificationCode });
+  return NextResponse.redirect(new URL('/', req.url), 303);
 }
 
 
