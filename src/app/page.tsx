@@ -14,6 +14,7 @@ import SignUpButton from './components/SignUpButton';
 import HowItWorksCard from './components/HowItWorksCard';
 import Link from 'next/link';
 import { useState } from 'react';
+import RegistrationConfirmation from './components/RegistrationConfirmation';
 
 export default function Home() {
   const [email, setEmail] = useState("")
@@ -120,6 +121,9 @@ export default function Home() {
           />
           <SignUpButton revertStyle={true} />
         </form>
+        <div className='w-full'>
+          <RegistrationConfirmation />
+        </div>
       </section>
       <section
         id="comeFunziona"
