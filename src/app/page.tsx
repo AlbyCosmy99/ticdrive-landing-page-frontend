@@ -42,17 +42,17 @@ export default function Home() {
   return (
     <>
       {/* Promotional Banner */}
-      <Link href="#registrati" passHref>
-        <div className="w-full bg-red-500 text-center p-2 text-white font-bold text-sm">
-            <p>Sconto del 15% sulla tua prima prenotazione!</p>
-        </div>
-      </Link>
       <section
         id="top"
         className="h-full flex flex-col rounded-b-3xl min-h-screen"
         style={{backgroundColor: '#00BF63'}}
       >
         <NavBar />
+        <Link href="#registrati" passHref>
+          <div className="w-full bg-red-500 text-center p-2 text-white font-bold text-sm">
+              <p>Sconto del 15% sulla tua prima prenotazione!</p>
+          </div>
+        </Link>
         <main className="flex flex-col justify-between items-center gap-4 lg:gap-2 flex-1 text-center text-white text-lg p-8 pb-0">
           <div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2">
