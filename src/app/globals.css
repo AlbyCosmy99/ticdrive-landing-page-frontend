@@ -24,6 +24,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
 @media (min-width: 1024px) {
   .three-line-text {
     overflow: hidden;
