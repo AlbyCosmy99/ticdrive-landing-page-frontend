@@ -49,7 +49,9 @@ export default function Home() {
       >
         <NavBar />
         <Link href="#registrati" passHref>
-          <div className="w-full bg-red-500 text-center p-2 text-white font-bold text-sm">
+          <div className="flex justify-evenly w-full bg-red-500 text-center p-2 text-white font-bold text-sm">
+              <p>Sconto del 15% sulla tua prima prenotazione!</p>
+              <p>Sconto del 15% sulla tua prima prenotazione!</p>
               <p>Sconto del 15% sulla tua prima prenotazione!</p>
           </div>
         </Link>
