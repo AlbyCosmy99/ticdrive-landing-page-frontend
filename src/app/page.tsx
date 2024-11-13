@@ -43,8 +43,8 @@ export default function Home() {
     <>
       {/* Promotional Banner */}
       <Link href="#registrati" passHref>
-        <div className="w-full bg-yellow-500 text-center p-4 text-white font-bold text-lg">
-            <p>🎉 Sconto del 15% sulla tua prima prenotazione! 🎉</p>
+        <div className="w-full bg-red-500 text-center p-4 text-white font-bold text-lg">
+            <p>Sconto del 15% sulla tua prima prenotazione!</p>
         </div>
       </Link>
       <section
