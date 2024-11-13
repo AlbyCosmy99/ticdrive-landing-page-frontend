@@ -13,48 +13,59 @@ import MiddleScreensGroup from '../../assets/middleScreensGroup.svg';
 import SignUpButton from './components/SignUpButton';
 import HowItWorksCard from './components/HowItWorksCard';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import RegistrationConfirmation from './components/RegistrationConfirmation';
 
 export default function Home() {
-  const [email, setEmail] = useState("")
-  const [progressIsVisible, setProgressIsVisible] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [privacyAccepted, setPrivacyAccepted] = useState(false)
+  const [email, setEmail] = useState("");
+  const [progressIsVisible, setProgressIsVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const bannerRef = useRef(null);
+  const [bannerHeight, setBannerHeight] = useState(0);
+
+  useEffect(() => {
+    if (bannerRef.current) {
+      setBannerHeight(bannerRef.current.offsetHeight);
+    }
+  }, []);
 
   const fetchData = async () => {
-    setLoading(true)
+    setLoading(true);
     fetch(`https://landing-page-users-ticdrive-backend.onrender.com/api/mail/subscription`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        email: email
-      })
-    }).then(res => res.json())
-    .then(res => {
-      console.log(res)
-      setLoading(false)
-      setProgressIsVisible(true)
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
     })
-  }
+    .then(res => res.json())
+    .then(res => {
+      console.log(res);
+      setLoading(false);
+      setProgressIsVisible(true);
+    });
+  };
+
   return (
     <>
-      {/* Promotional Banner */}
+      <div
+        ref={bannerRef}
+        className="w-full bg-red-500 text-white font-bold text-sm text-center p-2 flex justify-evenly fixed top-0 z-50"
+        style={{ backgroundColor: '#00BF63' }}
+      >
+        <Link href="#registrati" passHref>
+          <p>Sconto del 15% sulla tua prima prenotazione!</p>
+        </Link>
+      </div>
+
+      <div style={{ paddingTop: bannerHeight }}>
+        <NavBar />
+      </div>
+
       <section
         id="top"
         className="h-full flex flex-col rounded-b-3xl min-h-screen"
-        style={{backgroundColor: '#00BF63'}}
+        style={{ backgroundColor: '#00BF63' }}
       >
-        <NavBar />
-        <Link href="#registrati" passHref>
-          <div className="flex justify-evenly w-full bg-red-500 text-center p-2 text-white font-bold text-sm">
-              <p>Sconto del 15% sulla tua prima prenotazione!</p>
-              <p>Sconto del 15% sulla tua prima prenotazione!</p>
-              <p>Sconto del 15% sulla tua prima prenotazione!</p>
-          </div>
-        </Link>
         <main className="flex flex-col justify-between items-center gap-4 lg:gap-2 flex-1 text-center text-white text-lg p-8 pb-0">
           <div>
             <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2">
@@ -80,6 +91,7 @@ export default function Home() {
           </div>
         </main>
       </section>
+      
       <section
         id="section2"
         className="flex flex-col lg:flex-row justify-center items-center lg:m-12 lg:mx-24 min-h-screen m-8 mt-12"
@@ -109,6 +121,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section
         id="registrati"
         className={`bg-drive w-full h-100 flex flex-col justify-center items-center p-8 ${progressIsVisible && 'lg:pb-10'} lg:p-20 lg:pr-80 gap-6 lg:pl-40`}
@@ -173,6 +186,7 @@ export default function Home() {
           )
         }
       </section>
+
       <section
         id="comeFunziona"
         className="min-h-screen flex flex-col justify-center items-center gap-12 mt-12"
@@ -201,6 +215,7 @@ export default function Home() {
           />
         </div>
       </section>
+
       <section
         id="section5"
         className="bg-drive lg:h-80 m-8 lg:m-20 lg:mx-32 rounded-3xl flex flex-col lg:flex-row justify-between items-center lg:items-end p-8 lg:p-0 lg:px-20 my-14"
@@ -218,6 +233,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      
       <hr className="bg-white w-full" />
       <footer className="bg-drive flex flex-col justify-center items-center pt-2">
         <div className=' flex flex-col lg:flex-row justify-center items-center gap-4 text-white'>
