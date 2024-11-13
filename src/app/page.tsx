@@ -49,9 +49,9 @@ export default function Home() {
     <>
       <div
         ref={bannerRef}
-        className="h-8 w-full bg-red-500 text-white font-bold text-sm text-center p-2 flex justify-evenly fixed top-0 z-50"
+        className=" w-full bg-red-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
       >
-        <Link href="#registrati" passHref className='flex justify-evenly w-full'>
+        <Link href="#registrati" passHref className='flex justify-evenly w-full h-5'>
           <p className='hidden lg:block'>Sconto del 15% sulla tua prima prenotazione!</p>
           <p>Sconto del 15% sulla tua prima prenotazione!</p>
           <p className='hidden lg:block'>Sconto del 15% sulla tua prima prenotazione!</p>
