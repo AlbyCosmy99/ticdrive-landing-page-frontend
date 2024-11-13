@@ -47,6 +47,7 @@ export default function Home() {
 
   return (
     <div className='bg-white'>
+      <hr />
       <div
         ref={bannerRef}
         className=" w-full bg-red-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
