@@ -18,7 +18,7 @@ import RegistrationConfirmation from './components/RegistrationConfirmation';
 
 export default function Home() {
   const [email, setEmail] = useState("")
-  const [progressIsVisible, setProgressIsVisible] = useState(false)
+  const [progressIsVisible, setProgressIsVisible] = useState(true)
   const [loading, setLoading] = useState(false)
   const [privacyAccepted, setPrivacyAccepted] = useState(false)
 
@@ -160,8 +160,13 @@ export default function Home() {
         }
         {
           progressIsVisible && (
-            <div className='w-full'>
-              <RegistrationConfirmation setProgressIsVisible={setProgressIsVisible}/>
+            <div className='relative w-full'>
+              <div className=''>
+                <RegistrationConfirmation setProgressIsVisible={setProgressIsVisible}/>
+              </div>
+              <div className='absolute top-1 right-3 text-tic cursor-pointer' onClick={() => setProgressIsVisible(false)}>
+                X
+              </div>
             </div>
           )
         }
