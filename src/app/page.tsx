@@ -40,7 +40,7 @@ export default function Home() {
     })
   }
   return (
-    <>
+    <div className='bg-white'>
       {/* Promotional Banner */}
       <Link href="#registrati" passHref>
         <div className="w-full bg-red-500 text-center p-2 text-white font-bold text-sm">
@@ -228,6 +228,6 @@ export default function Home() {
           &copy; Copyright - All Rights Reserved
         </p>
       </footer>
-    </>
+    </div>
   );
 }
