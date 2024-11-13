@@ -18,7 +18,7 @@ import RegistrationConfirmation from './components/RegistrationConfirmation';
 
 export default function Home() {
   const [email, setEmail] = useState("")
-  const [progressIsVisible, setProgressIsVisible] = useState(true)
+  const [progressIsVisible, setProgressIsVisible] = useState(false)
   const [loading, setLoading] = useState(false)
   const [privacyAccepted, setPrivacyAccepted] = useState(false)
 
