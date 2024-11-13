@@ -41,9 +41,11 @@ export default function Home() {
   return (
     <>
       {/* Promotional Banner */}
-      <div className="w-full bg-yellow-500 text-center p-4 text-white font-bold text-lg">
-          <p>🎉 Sconto del 15% sulla tua prima prenotazione! 🎉</p>
-      </div>
+      <Link href="#registrati" passHref>
+        <div className="w-full bg-yellow-500 text-center p-4 text-white font-bold text-lg">
+            <p>🎉 Sconto del 15% sulla tua prima prenotazione! 🎉</p>
+        </div>
+      </Link>
       <section
         id="top"
         className="h-full flex flex-col rounded-b-3xl min-h-screen"
