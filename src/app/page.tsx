@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className='bg-white'>
       <div
         ref={bannerRef}
         className=" w-full bg-red-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
@@ -247,6 +247,6 @@ export default function Home() {
           &copy; Copyright - All Rights Reserved
         </p>
       </footer>
-    </>
+    </div>
   );
 }
