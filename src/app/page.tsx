@@ -21,7 +21,7 @@ export default function Home() {
   const [progressIsVisible, setProgressIsVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
-  const bannerRef = useRef(null);
+  const bannerRef = useRef<HTMLDivElement | null>(null); // Set the type for the ref
   const [bannerHeight, setBannerHeight] = useState(0);
 
   useEffect(() => {
