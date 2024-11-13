@@ -197,7 +197,12 @@ export default function Home() {
         </div>
       </section>
       <hr className="bg-white w-full" />
-      <footer className="bg-drive flex justify-center items-center">
+      <footer className="bg-drive flex flex-col justify-center items-center pt-2">
+        <div className=' flex justify-center items-center gap-4 text-white'>
+          <a href="https://www.iubenda.com/privacy-policy/25498782">Privacy Policy</a>-
+          <a href="https://www.iubenda.com/privacy-policy/25498782/cookie-policy">Cookie Policy</a>-
+          <a href="https://www.iubenda.com/termini-e-condizioni/25498782">Terms and Conditions</a>
+        </div>
         <p className="text-white text-center p-2 text-sm">
           &copy; Copyright - All Rights Reserved
         </p>
