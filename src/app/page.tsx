@@ -20,6 +20,7 @@ export default function Home() {
   const [email, setEmail] = useState("")
   const [progressIsVisible, setProgressIsVisible] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [privacyAccepted, setPrivacyAccepted] = useState(false)
 
   const fetchData = async () => {
     setLoading(true)
@@ -115,22 +116,36 @@ export default function Home() {
           sconto speciale del 15% sulla tua prima prenotazione.
         </p>
         <form
-          className="flex flex-col lg:flex-row items-start lg:items-center self-start gap-2"
+          className="flex flex-col items-start self-start gap-3"
           onSubmit={(event) => {
             event.preventDefault()
             fetchData()
             setEmail("")
+            setPrivacyAccepted(false)
           }}
         >
+         <div className='flex flex-col lg:flex-row lg:items-center gap-2 items-start self-start'>
           <input
-            placeholder="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="h-fit w-80 p-4 rounded-3xl h-full"
-            required
-          />
-          <SignUpButton revertStyle={true} />
+              placeholder="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="h-fit w-80 p-4 rounded-3xl h-full"
+              required
+            />
+            <SignUpButton revertStyle={true} />
+         </div>
+          <label className="text-white flex items-center gap-2">
+              <input 
+                type="checkbox" 
+                name="privacy" 
+                checked={privacyAccepted}
+                onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                required />
+              <div>
+                  Accetto la <a href="https://www.iubenda.com/privacy-policy/25498782/legal" className="underline">Privacy Policy</a> e i <a href="https://www.iubenda.com/privacy-policy/25498782/cookie-policy" className="underline">Cookie Policy</a>.
+              </div>
+          </label>
         </form>
         {
           loading && !progressIsVisible && (
@@ -199,7 +214,7 @@ export default function Home() {
       <hr className="bg-white w-full" />
       <footer className="bg-drive flex flex-col justify-center items-center pt-2">
         <div className=' flex justify-center items-center gap-4 text-white'>
-          <a href="https://www.iubenda.com/privacy-policy/25498782">Privacy Policy</a>-
+          <a href="https://www.iubenda.com/privacy-policy/25498782/legal">Privacy Policy</a>-
           <a href="https://www.iubenda.com/privacy-policy/25498782/cookie-policy">Cookie Policy</a>-
           <a href="https://www.iubenda.com/termini-e-condizioni/25498782">Terms and Conditions</a>
         </div>
