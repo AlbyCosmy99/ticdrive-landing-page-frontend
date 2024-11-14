@@ -31,7 +31,7 @@ export default function Home() {
 
   const fetchData = async () => {
     setLoading(true);
-    fetch(`https://landing-page-users-ticdrive-backend.onrender.com/api/mail/confirmation`, {
+    fetch(`http://localhost:3030/api/mail/confirmation`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email })
@@ -42,6 +42,7 @@ export default function Home() {
       setLoading(false);
       if(res.confirmed) {
         setProgressIsVisible(true);
+        sessionStorage.setItem('token', res.token)
       } else {
         router.push('mail/subscription-sent')
       }
