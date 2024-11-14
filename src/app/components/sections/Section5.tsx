@@ -5,7 +5,7 @@ const Section5 = () => {
     return (
         <section
         id="section5"
-        className="bg-drive lg:h-80 m-8 lg:m-20 lg:mx-32 lg:p-2 rounded-3xl flex flex-col lg:flex-row justify-between items-center lg:items-end p-8 lg:p-0 lg:px-20 my-14"
+        className="bg-drive lg:h-80 m-8 lg:m-20 lg:mx-32 lg:p-4 rounded-3xl flex flex-col lg:flex-row justify-between items-center lg:items-end p-8 lg:p-0 lg:px-20 my-14"
       >
         <div className="self-center flex flex-col gap-6">
           <h2 className="font-bold text-2xl lg:text-5xl text-white">
