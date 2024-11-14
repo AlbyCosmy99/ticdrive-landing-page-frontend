@@ -10,6 +10,7 @@ import Section2 from './components/sections/Section2';
 import Footer from './components/Footer';
 import Section5 from './components/sections/Section5';
 import Section4 from './components/sections/Section4';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -18,6 +19,7 @@ export default function Home() {
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const bannerRef = useRef<HTMLDivElement | null>(null);
   const [bannerHeight, setBannerHeight] = useState(0);
+  const router = useRouter()
 
   useEffect(() => {
     if (bannerRef.current) {
@@ -37,6 +39,7 @@ export default function Home() {
       console.log(res);
       setLoading(false);
       setProgressIsVisible(true);
+      router.push('mail/subscription-sent')
     });
   };
 
@@ -117,7 +120,7 @@ export default function Home() {
               <div className=''>
                 <RegistrationConfirmation setProgressIsVisible={setProgressIsVisible}/>
               </div>
-              <div className='absolute top-1 right-3 text-tic cursor-pointer' onClick={() => setProgressIsVisible(false)}>
+              <div className='absolute top-2 right-3 text-tic cursor-pointer' onClick={() => setProgressIsVisible(false)}>
                 X
               </div>
             </div>
