@@ -5,13 +5,13 @@ const Section5 = () => {
     return (
         <section
         id="section5"
-        className="bg-drive lg:h-80 m-8 lg:m-20 lg:mx-32 rounded-3xl flex flex-col lg:flex-row justify-between items-center lg:items-end p-8 lg:p-0 lg:px-20 my-14"
+        className="bg-drive lg:h-80 m-8 lg:m-20 lg:mx-32 lg:p-2 rounded-3xl flex flex-col lg:flex-row justify-between items-center lg:items-end p-8 lg:p-0 lg:px-20 my-14"
       >
         <div className="self-center flex flex-col gap-6">
           <h2 className="font-bold text-2xl lg:text-5xl text-white">
             Vuoi essere il primo a scoprire l&apos; app?
           </h2>
-          <p className="text-white text-2xl lg:text-3xl lg:pr-40">
+          <p className="text-white text-xl lg:text-2xl lg:pr-40">
             Iscriviti ora per ottenere l&apos; accesso anticipato e ricevere uno
             sconto speciale del 15% sulla tua prima prenotazione.
           </p>
