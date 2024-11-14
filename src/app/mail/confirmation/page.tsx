@@ -1,9 +1,9 @@
 "use client" 
 
+import Spinner from "@/app/components/ui/Spinner"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useEffect } from "react"
-import Spinner from "../components/ui/Spinner"
 
 const Success = () => {
     const router = useRouter()
