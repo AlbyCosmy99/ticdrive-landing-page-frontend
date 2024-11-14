@@ -52,7 +52,7 @@ export default function Home() {
     <>
       <div
         ref={bannerRef}
-        style={{border: '1px solid white'}}
+        style={{borderTop: '1px solid white'}}
         className="w-full bg-red-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
       >
         <Link href="#registrati" passHref className='flex justify-evenly w-full h-5'>
