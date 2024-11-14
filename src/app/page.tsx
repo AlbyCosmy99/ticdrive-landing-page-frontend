@@ -10,7 +10,7 @@ import Section2 from './components/sections/Section2';
 import Footer from './components/Footer';
 import Section5 from './components/sections/Section5';
 import Section4 from './components/sections/Section4';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -26,6 +26,8 @@ export default function Home() {
       setBannerHeight(bannerRef.current.offsetHeight);
     }
   }, []);
+
+
 
   const fetchData = async () => {
     setLoading(true);

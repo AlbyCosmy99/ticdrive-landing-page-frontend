@@ -20,10 +20,10 @@ const RegistrationConfirmation: React.FC<{ setProgressIsVisible: (loading: boole
         progress !== 0 && (
             <div style={{ padding: '1em', textAlign: 'center', backgroundColor: '#f0f8ff', borderRadius: '8px' }}>
                 <p style={{ fontSize: '1.2em', color: '#00BF63', fontWeight: 'bold' }}>
-                    Iscrizione avvenuta con successo!
+                    Sei già iscritto alla nostra newsletter!
                 </p>
                 <p style={{ fontSize: '1em', color: '#737373' }}>
-                    Conferma la tua email per ricevere lo sconto del 15% e rimanere sempre aggiornato.
+                    Ti abbiamo inviato nuovamente per mail il codice sconto. Grazie per la fiducia!
                 </p>
                 <div className='mt-2'>
                     <Progress value={progress} />

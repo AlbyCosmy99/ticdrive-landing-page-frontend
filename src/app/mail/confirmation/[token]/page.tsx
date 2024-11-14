@@ -15,19 +15,21 @@ const MailConfirmation = () => {
 
         const checkToken = async () => {
             try {
-                const response = await fetch(`https://landing-page-users-ticdrive-backend.onrender.com/api/check-token/token=${token}`)
-                const tokenIsValid = await response.json()
-                if(tokenIsValid) {
-                    console.log(tokenIsValid)
-                    router.replace('/mail/success/' + token)
+                const response = await fetch(`https://landing-page-users-ticdrive-backend.onrender.com/api/mail/check-token?token=${token}`);
+                const tokenIsValid = await response.json();
+                console.log(tokenIsValid);
+                if (tokenIsValid) {
+                    console.log(tokenIsValid);
+                    router.replace('/mail/success/' + token);
                 } else {
-                    router.replace('/mail/failure')
+                    router.replace('/mail/failure');
                 }
-            } catch(error) {
-                console.log(error)
-                router.replace('/mail/failure')
+            } catch (error) {
+                console.log(error);
+                router.replace('/mail/failure/');
             }
-        }
+        };
+        
         checkToken()
     }, [])
  
