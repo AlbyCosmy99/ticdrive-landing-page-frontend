@@ -8,7 +8,7 @@ const Success = () => {
             <div className="text-center mt-5">
                 <h1 className="font-bold text-2xl mb-3">La tua mail è  stata confermata!</h1>
                 <p>Ti abbiamo inviato il codice sconto sulla stessa posta elettronica.</p>
-                <p>Rimani aggiornato sulle novità di <span className="text-tic">Tic</span><span className="text-drive">Drive</span> e sul suo lancio.</p>
+                <p>Rimani sempre aggiornato sulle novità di <span className="text-tic">Tic</span><span className="text-drive">Drive</span> e sul suo lancio.</p>
             </div>
             <div className="text-center mt-4">
                 <h3 className="text-lg font-semibold">Non ti arriva nulla?</h3>
