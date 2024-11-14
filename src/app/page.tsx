@@ -32,7 +32,7 @@ export default function Home() {
 
   const fetchData = async () => {
     setLoading(true);
-    fetch(`https://landing-page-users-ticdrive-backend.onrender.com/api/mail/subscription`, {
+    fetch(`https://landing-page-users-ticdrive-backend.onrender.com/api/mail/confirmation`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email })
