@@ -3,11 +3,11 @@ import Image from "next/image"
 const Success = () => {
 
     return (
-        <div className="flex flex-col justify-center items-center min-h-screen p-2">
+        <div className="flex flex-col justify-center items-center min-h-screen p-4">
             <Image width={125} height={125} src="https://albycosmy99.github.io/landing-page-users-ticDrive-backend/assets/TicDriveLogo.jpeg" alt="TicDrive Logo" />
             <div className="text-center mt-5">
                 <h1 className="font-bold text-2xl mb-3">La tua mail è  stata confermata!</h1>
-                <p>Ti abbiamo inviato il codice sconto sulla stessa posta elettronica.</p>
+                <p>Ti abbiamo inviato il codice sconto sulla tua posta elettronica.</p>
                 <p>Rimani sempre aggiornato sulle novità di <span className="text-tic">Tic</span><span className="text-drive">Drive</span> e sul suo lancio.</p>
             </div>
             <div className="text-center mt-4">
