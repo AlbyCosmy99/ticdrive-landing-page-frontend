@@ -38,8 +38,11 @@ export default function Home() {
     .then(res => {
       console.log(res);
       setLoading(false);
-      setProgressIsVisible(true);
-      router.push('mail/subscription-sent')
+      if(res.confirmed) {
+        setProgressIsVisible(true);
+      } else {
+        router.push('mail/subscription-sent')
+      }
     });
   };
 
