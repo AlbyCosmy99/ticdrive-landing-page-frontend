@@ -4,6 +4,7 @@ import './globals.css';
 import type {Metadata} from 'next';
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -27,6 +28,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <SpeedInsights/>
+        <Analytics/>
         {children}
       </body>
     </html>
