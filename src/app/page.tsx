@@ -53,7 +53,6 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* Adjusted padding to compensate for banner height */}
       <div style={{ paddingTop: '2.5rem' }}>
         <NavBar />
       </div>
