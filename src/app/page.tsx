@@ -48,7 +48,6 @@ export default function Home() {
       window.gtag('event', 'banner_promo', {
         event_category: 'Banner',
         event_label: '15% Discount Banner',
-        value: 1,
         iat: new Date()
       });
     } else {
