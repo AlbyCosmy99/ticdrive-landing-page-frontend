@@ -44,7 +44,7 @@ export default function Home() {
         setProgressIsVisible(true);
         sessionStorage.setItem('token', res.token)
       } else {
-        router.replace('mail/subscription-sent')
+        //router.replace('mail/subscription-sent')
       }
     });
   };
