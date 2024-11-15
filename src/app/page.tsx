@@ -45,13 +45,15 @@ export default function Home() {
 
   const handleBannerClick = () => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'click', {
+      window.gtag('event', 'banner_promo', {
         event_category: 'Banner',
         event_label: '15% Discount Banner',
         value: 1,
       });
+    } else {
+      console.warn("Google Analytics 'gtag' not initialized.");
     }
-  };
+  };  
 
   return (
     <>
