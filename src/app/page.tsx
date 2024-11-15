@@ -57,7 +57,7 @@ export default function Home() {
 
   const handleGoogleAnalyticsEmailClick = () => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'email_input', {
+      window.gtag('event', 'email_input_click', {
         event_category: 'Email Input',
         event_label: 'Clicked on email input',
         iat: new Date()
