@@ -10,7 +10,7 @@ import Section2 from './components/sections/Section2';
 import Footer from './components/Footer';
 import Section5 from './components/sections/Section5';
 import Section4 from './components/sections/Section4';
-// import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -19,7 +19,7 @@ export default function Home() {
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const bannerRef = useRef<HTMLDivElement | null>(null);
   const [bannerHeight, setBannerHeight] = useState(0);
-  // const router = useRouter()
+  const router = useRouter()
 
   useEffect(() => {
     if (bannerRef.current) {
@@ -44,7 +44,7 @@ export default function Home() {
         setProgressIsVisible(true);
         sessionStorage.setItem('token', res.token)
       } else {
-        //router.replace('mail/subscription-sent')
+        router.replace('mail/subscription-sent')
       }
     });
   };
@@ -135,6 +135,7 @@ export default function Home() {
           )
         }
       </section>
+      {/* HowItWorks Cards */}
       <Section4 />
       <Section5 />
       <hr className="bg-white w-full" />
