@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import NavBar from './components/Navbar';
 import SignUpButton from './components/SignUpButton';
@@ -19,15 +19,13 @@ export default function Home() {
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const bannerRef = useRef<HTMLDivElement | null>(null);
   const [bannerHeight, setBannerHeight] = useState(0);
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
     if (bannerRef.current) {
       setBannerHeight(bannerRef.current.offsetHeight);
     }
   }, []);
-
-
 
   const fetchData = async () => {
     setLoading(true);
@@ -38,13 +36,12 @@ export default function Home() {
     })
     .then(res => res.json())
     .then(res => {
-      console.log(res);
       setLoading(false);
-      if(res.confirmed) {
+      if (res.confirmed) {
         setProgressIsVisible(true);
-        sessionStorage.setItem('token', res.token)
+        sessionStorage.setItem('token', res.token);
       } else {
-        router.replace('mail/subscription-sent')
+        router.replace('mail/subscription-sent');
       }
     });
   };
@@ -53,13 +50,15 @@ export default function Home() {
     <>
       <div
         ref={bannerRef}
-        style={{borderTop: '1px solid white'}}
+        style={{ borderTop: '1px solid white' }}
         className="w-full bg-red-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
+        role="banner"
+        aria-label="Banner offering 15% discount on first booking"
       >
         <Link href="#registrati" passHref className='flex justify-evenly w-full h-5'>
-          <p className='hidden lg:block'>Sconto del 15% sulla tua prima prenotazione!</p>
+          <p className='hidden lg:block' aria-hidden="true">Sconto del 15% sulla tua prima prenotazione!</p>
           <p>Sconto del 15% sulla tua prima prenotazione!</p>
-          <p className='hidden lg:block'>Sconto del 15% sulla tua prima prenotazione!</p>
+          <p className='hidden lg:block' aria-hidden="true">Sconto del 15% sulla tua prima prenotazione!</p>
         </Link>
       </div>
 
@@ -72,38 +71,45 @@ export default function Home() {
       <section
         id="registrati"
         className={`bg-drive w-full h-100 flex flex-col justify-center items-center p-8 ${progressIsVisible && 'lg:pb-10'} lg:p-20 lg:pr-80 gap-6 lg:pl-40`}
+        aria-labelledby="signup-heading"
       >
-        <p className="text-white text-3xl lg:text-4xl font-bold lg:pr-40">
-          Iscriviti ora per ottenere l&apos; accesso anticipato e ricevere uno
-          sconto speciale del 15% sulla tua prima prenotazione.
-        </p>
+        <h2 id="signup-heading" className="text-white text-3xl lg:text-4xl font-bold lg:pr-40">
+          Iscriviti ora per ottenere l&apos; accesso anticipato e ricevere uno sconto speciale del 15% sulla tua prima prenotazione.
+        </h2>
         <form
           className="flex flex-col items-start self-start gap-3"
           onSubmit={(event) => {
-            event.preventDefault()
-            fetchData()
-            setEmail("")
-            setPrivacyAccepted(false)
+            event.preventDefault();
+            fetchData();
+            setEmail("");
+            setPrivacyAccepted(false);
           }}
+          aria-live="polite"
         >
          <div className='flex flex-col lg:flex-row lg:items-center gap-2 items-start self-start'>
+          <label htmlFor="email" className="sr-only">Inserisci la tua email</label>
           <input
+              id="email"
               placeholder="email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="h-fit w-80 p-4 rounded-3xl h-full"
               required
-            />
-            <SignUpButton revertStyle={true} />
+              aria-required="true"
+          />
+            <SignUpButton revertStyle={true} aria-label="Conferma iscrizione" />
          </div>
-          <label className="text-white flex items-center gap-2">
+          <label className="text-white flex items-center gap-2" htmlFor="privacy">
               <input 
+                id="privacy"
                 type="checkbox" 
                 name="privacy" 
                 checked={privacyAccepted}
                 onChange={(e) => setPrivacyAccepted(e.target.checked)}
-                required />
+                required 
+                aria-required="true"
+              />
               <div>
                   Accetto la <a href="https://www.iubenda.com/privacy-policy/25498782/legal" className="underline">Privacy Policy</a> e i <a href="https://www.iubenda.com/privacy-policy/25498782/cookie-policy" className="underline">Cookie Policy</a>.
               </div>
@@ -125,12 +131,12 @@ export default function Home() {
         {
           progressIsVisible && (
             <div className='relative w-full'>
-              <div className=''>
+              <div aria-live="assertive" aria-label="Registration Confirmation">
                 <RegistrationConfirmation setProgressIsVisible={setProgressIsVisible}/>
               </div>
-              <div className='absolute top-2 right-3 text-tic cursor-pointer' onClick={() => setProgressIsVisible(false)}>
+              <button className='absolute top-2 right-3 text-tic cursor-pointer' onClick={() => setProgressIsVisible(false)} aria-label="Close confirmation">
                 X
-              </div>
+              </button>
             </div>
           )
         }
@@ -138,7 +144,7 @@ export default function Home() {
       {/* HowItWorks Cards */}
       <Section4 />
       <Section5 />
-      <hr className="bg-white w-full" />
+      <hr className="bg-white w-full" aria-hidden="true" />
       <Footer />
     </>
   );
