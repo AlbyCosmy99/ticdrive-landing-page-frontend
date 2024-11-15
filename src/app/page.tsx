@@ -55,6 +55,35 @@ export default function Home() {
     }
   };  
 
+  const handleGoogleAnalyticsEmailClick = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'email_input', {
+        event_category: 'Email Input',
+        event_label: 'Clicked on email input',
+        iat: new Date()
+      });
+    } else {
+      console.warn("Google Analytics 'gtag' not initialized.");
+    }
+  };  
+
+  const handleGoogleAnalyticsEmailChange = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'email_typing', {
+        event_category: 'Email Typing',
+        event_label: 'Typing on email input',
+        iat: new Date()
+      });
+    } else {
+      console.warn("Google Analytics 'gtag' not initialized.");
+    }
+  };  
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+    handleGoogleAnalyticsEmailChange();
+  };
+  
   return (
     <>
       <div
@@ -103,10 +132,11 @@ export default function Home() {
               placeholder="email"
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
               className="h-fit w-80 p-4 rounded-3xl h-full"
               required
               aria-required="true"
+              onClick={handleGoogleAnalyticsEmailClick}
             />
             <SignUpButton revertStyle={true} aria-label="Conferma iscrizione" />
           </div>
