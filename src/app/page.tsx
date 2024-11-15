@@ -3,7 +3,7 @@
 import NavBar from './components/Navbar';
 import SignUpButton from './components/SignUpButton';
 import Link from 'next/link';
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import RegistrationConfirmation from './components/RegistrationConfirmation';
 import Section1 from './components/sections/Section1';
 import Section2 from './components/sections/Section2';
@@ -17,15 +17,7 @@ export default function Home() {
   const [progressIsVisible, setProgressIsVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
-  const bannerRef = useRef<HTMLDivElement | null>(null);
-  const [bannerHeight, setBannerHeight] = useState(0);
   const router = useRouter();
-
-  useEffect(() => {
-    if (bannerRef.current) {
-      setBannerHeight(bannerRef.current.offsetHeight);
-    }
-  }, []);
 
   const fetchData = async () => {
     setLoading(true);
@@ -49,8 +41,7 @@ export default function Home() {
   return (
     <>
       <div
-        ref={bannerRef}
-        style={{ borderTop: '1px solid white' }}
+        style={{ borderTop: '1px solid white', height: '2.5rem' }}
         className="w-full bg-red-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
         role="banner"
         aria-label="Banner offering 15% discount on first booking"
@@ -62,7 +53,8 @@ export default function Home() {
         </Link>
       </div>
 
-      <div style={{ paddingTop: bannerHeight }}>
+      {/* Adjusted padding to compensate for banner height */}
+      <div style={{ paddingTop: '2.5rem' }}>
         <NavBar />
       </div>
       <Section1 />
