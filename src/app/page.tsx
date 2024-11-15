@@ -49,6 +49,7 @@ export default function Home() {
         event_category: 'Banner',
         event_label: '15% Discount Banner',
         value: 1,
+        iat: new Date()
       });
     } else {
       console.warn("Google Analytics 'gtag' not initialized.");
