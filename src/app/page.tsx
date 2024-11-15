@@ -67,11 +67,12 @@ export default function Home() {
     }
   };  
 
-  const handleGoogleAnalyticsEmailChange = () => {
+  const handleGoogleAnalyticsEmailChange = (typing: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'email_typing', {
         event_category: 'Email Typing',
         event_label: 'Typing on email input',
+        typing,
         iat: new Date()
       });
     } else {
@@ -81,7 +82,7 @@ export default function Home() {
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
-    handleGoogleAnalyticsEmailChange();
+    handleGoogleAnalyticsEmailChange(e.target.value);
   };
   
   return (
