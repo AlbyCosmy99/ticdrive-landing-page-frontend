@@ -158,20 +158,6 @@ export default function Home() {
               />
               <SignUpButton revertStyle={true} aria-label="Iscriviti gratuitamente alla newsletter" />
             </div>
-            <label className="text-white flex items-center gap-2" htmlFor="privacy">
-              <input
-                id="privacy"
-                type="checkbox"
-                name="privacy"
-                checked={privacyAccepted}
-                onChange={(e) => setPrivacyAccepted(e.target.checked)}
-                required
-                aria-required="true"
-              />
-              <div>
-                Accetto la <a href="https://www.iubenda.com/privacy-policy/25498782/legal" className="underline">Privacy Policy</a> e i <a href="https://www.iubenda.com/privacy-policy/25498782/cookie-policy" className="underline">Cookie Policy</a>.
-              </div>
-            </label>
           </form>
 
           {loading && !progressIsVisible && (
