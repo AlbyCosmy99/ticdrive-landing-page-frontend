@@ -50,9 +50,9 @@ const Section1: React.FC = () => {
     >
       <main className="flex flex-col justify-between items-center gap-4 lg:gap-2 flex-1 text-center text-white text-lg p-8 pb-0">
         <div>
-          <h2 className="text-3xl lg:text-4xl">Hai mai pensato...</h2>
+          <h2 className="text-2xl lg:text-3xl">Hai mai pensato...</h2>
           <p
-            className={`text-2xl lg:text-3xl font-medium transition-opacity duration-500 ease-in-out ${
+            className={`text-xl lg:text-2xl font-medium transition-opacity duration-500 ease-in-out ${
               isFadingOut ? "opacity-0" : "opacity-100"
             }`}
           >
