@@ -206,8 +206,8 @@ export default function Home() {
       >
         <div className='w-full bg-white' style={{height: '5rem'}}></div>
         <div className={`bg-drive w-full h-100 flex flex-col justify-center items-center p-8 ${progressIsVisible && 'lg:pb-10'} lg:p-20 lg:pr-80 gap-6 lg:pl-40`}>
-          <h2 id="signup-heading" className="text-white text-3xl lg:text-4xl font-bold lg:pr-40">
-            Iscriviti gratuitamente alla nostra lista d&apos; attesa per ottenere <span className='underline'>l&apos; accesso anticipato</span> e uno <span className='underline'>sconto speciale del 15%</span> sulla tua prima prenotazione.
+          <h2 id="signup-heading" className="text-white text-3xl lg:text-4xl font-bold lg:pr-36">
+            Iscriviti gratuitamente alla nostra lista d&apos; attesa per ottenere <span className='uppercase'>l&apos; accesso anticipato</span> e uno <span className='uppercase'>sconto speciale del 15%</span> sulla tua prima prenotazione.
           </h2>
           <form
             className="flex flex-col items-start self-start gap-3"
