@@ -3,7 +3,7 @@
 import NavBar from './components/Navbar';
 import SignUpButton from './components/SignUpButton';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import RegistrationConfirmation from './components/RegistrationConfirmation';
 import Section1 from './components/sections/Section1';
 import Section2 from './components/sections/Section2';
@@ -17,7 +17,22 @@ export default function Home() {
   const [progressIsVisible, setProgressIsVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(3600); 
+  const [spotsLeft, setSpotsLeft] = useState(29); 
   const router = useRouter();
+  
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
+  };
 
   const fetchData = async () => {
     setLoading(true);
@@ -88,35 +103,52 @@ export default function Home() {
   return (
     <>
       {/* Primo banner */}
-    <div
+    <Link
       style={{ borderTop: '1px solid white', height: '2.5rem' }}
       className="w-full bg-red-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
       role="banner"
+      passHref
+      href="#registrati"
       aria-label="Banner offering 15% discount on first booking"
       onClick={handleBannerClick}
     >
-      <Link href="#registrati" passHref className="flex justify-evenly w-full h-5">
+      <div className="flex justify-evenly w-full h-5">
         <p className="hidden lg:block" aria-hidden="true">Sconto del 15% sulla tua prima prenotazione!</p>
         <p>Sconto del 15% sulla tua prima prenotazione!</p>
         <p className="hidden lg:block" aria-hidden="true">Sconto del 15% sulla tua prima prenotazione!</p>
-      </Link>
-    </div>
+      </div>
+    </Link>
+
     {/* Secondo banner */}
-    <div
-      style={{ height: '2.5rem', top: '2.5rem' }} 
-      className="w-full bg-yellow-500 text-white font-bold text-sm text-center lg:p-2 lg:items-center flex justify-evenly  fixed z-50"
+    <Link
+      style={{ height: '3rem', top: '2.5rem' }} 
+      className="w-full bg-red-500 text-white font-bold text-sm text-center lg:p-2 lg:items-center flex justify-evenly  fixed z-50"
       role="banner"
+      href="#registrati"
+      passHref
       aria-label="Free waiting list banner"
       onClick={handleBannerClick}
     >
-      <Link href="#registrati" passHref className="flex justify-evenly w-full h-5">
-        <p className="hidden lg:block" aria-hidden="true">Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
-        <p>Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
-        <p className="hidden lg:block" aria-hidden="true">Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
-      </Link>
-    </div>
+      <div className="text-center text-white flex justify-center items-center">
+        <p className="text-lg font-semibold">Offerta scade tra: {formatTime(timeLeft)}</p>
+      </div>
+    </Link>
 
-    <div style={{ paddingTop: '5rem' }}>
+     {/* Terzo banner */}
+    <Link
+      style={{ borderTop: '1px solid white', height: '2.5rem', top: '5rem' }}
+      className="w-full bg-slate-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
+      role="banner"
+      href="#registrati" passHref 
+      aria-label="Banner offering 15% discount on first booking"
+      onClick={handleBannerClick}
+    >
+      <div className="w-full h-5 flex justify-center items-center">
+        <p className="text-lg font-semibold">Posti rimanenti: {spotsLeft}</p>
+      </div>
+    </Link>
+
+    <div style={{ paddingTop: '7.5rem' }}>
         <NavBar />
       </div>
       <Section1 />
@@ -128,7 +160,7 @@ export default function Home() {
         
         aria-labelledby="signup-heading"
       >
-        <div className='w-full bg-white' style={{height: '5rem'}}></div>
+        <div className='w-full bg-white' style={{height: '7.5rem'}}></div>
         <div className={`bg-drive w-full h-100 flex flex-col justify-center items-center p-8 ${progressIsVisible && 'lg:pb-10'} lg:p-20 lg:pr-80 gap-6 lg:pl-40`}>
           <h2 id="signup-heading" className="text-white text-3xl lg:text-4xl font-bold lg:pr-40">
             Iscriviti gratuitamente alla nostra newsletter per ottenere l&apos; accesso anticipato e uno sconto speciale del 15% sulla tua prima prenotazione.
