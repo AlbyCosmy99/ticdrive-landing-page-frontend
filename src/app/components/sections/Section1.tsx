@@ -63,11 +63,6 @@ const Section1: React.FC = () => {
             <span>Trova la Migliore Officina</span>{' '}
             <span>Vicino a Te in Pochi Click</span>
           </h1>
-          <p className="mt-3 text-lg lg:text-xl">
-            Confronta i prezzi, leggi le recensioni e prenota facilmente e in{' '}
-            <br />
-            modo trasparente i servizi di manutenzione e riparazione auto.
-          </p>
         </div>
         <div className="flex justify-center items-center mt-4 mx-4 lg:mt-14 lg:mx-20 lg:mb-0">
           <div className="hidden lg:block max-lg:hidden">
