@@ -122,7 +122,7 @@ export default function Home() {
       onClick={handleBannerClick}
     >
       <div className="w-full h-5 flex justify-center items-center">
-        <p className="text-lg font-semibold">Posti rimanenti: {spotsLeft} / 100</p>
+        <p className="text-lg font-semibold">Iscriviti gratuitamente. Posti rimanenti: {spotsLeft} / 100</p>
       </div>
     </Link>
 
