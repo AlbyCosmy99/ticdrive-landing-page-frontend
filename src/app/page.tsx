@@ -18,7 +18,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [, setTimeLeft] = useState(3600); 
-  const [spotsLeft, setSpotsLeft] = useState(78); 
+  const [spotsLeft, setSpotsLeft] = useState('-'); 
   const router = useRouter();
   
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function Home() {
     const setSpotsLeftFunc = async () => {
       const res = await fetch('https://landing-page-users-ticdrive-backend.onrender.com/api/mail')
       const emails = await res.json()
-      setSpotsLeft(100 - emails.length)
+      setSpotsLeft((100 - emails.length).toString())
     }
     
     setSpotsLeftFunc()
