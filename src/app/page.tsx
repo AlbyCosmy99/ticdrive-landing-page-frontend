@@ -145,7 +145,7 @@ export default function Home() {
         
         aria-labelledby="signup-heading"
       >
-        <div className='w-full bg-white' style={{height: '5rem'}}></div>
+        <div className='w-full bg-drive' style={{height: '5rem'}}></div>
         <div className={`bg-drive w-full h-100 flex flex-col justify-center items-center p-8 ${progressIsVisible && 'lg:pb-10'} lg:p-20 lg:pr-80 gap-6 lg:pl-40`}>
           <h2 id="signup-heading" className="text-white text-3xl lg:text-4xl font-bold lg:pr-40">
             Iscriviti gratuitamente alla nostra lista d&apos; attesa per ottenere <span>l&apos; accesso anticipato</span> e uno <span>sconto speciale del 15%</span> sulla tua prima prenotazione.
