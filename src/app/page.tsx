@@ -131,7 +131,7 @@ export default function Home() {
         <div className='w-full bg-white' style={{height: '5rem'}}></div>
         <div className={`bg-drive w-full h-100 flex flex-col justify-center items-center p-8 ${progressIsVisible && 'lg:pb-10'} lg:p-20 lg:pr-80 gap-6 lg:pl-40`}>
           <h2 id="signup-heading" className="text-white text-2xl lg:text-4xl font-bold lg:pr-40">
-            Iscriviti gratuitamente alla nostra lista d&apos; attesa per ottenere <span className='underline'>l&apos; accesso anticipato</span> e uno <span className='underline'>sconto speciale del 15%</span> sulla tua prima prenotazione.
+            Iscriviti gratuitamente alla nostra lista d&apos; attesa per ottenere <span className='underline'>l&apos; accesso anticipato</span> e uno <span className='underline'>sconto speciale del 15%</span> sulla tua prima prenotazione!
           </h2>
           <form
             className="flex flex-col items-start self-start gap-3"
@@ -207,7 +207,7 @@ export default function Home() {
         <div className='w-full bg-white' style={{height: '5rem'}}></div>
         <div className={`bg-drive w-full h-100 flex flex-col justify-center items-center p-8 ${progressIsVisible && 'lg:pb-10'} lg:p-20 lg:pr-80 gap-6 lg:pl-40`}>
           <h2 id="signup-heading" className="text-white text-2xl lg:text-4xl font-bold lg:pr-40">
-            Iscriviti gratuitamente alla nostra lista d&apos; attesa per ottenere <span className='underline'>l&apos; accesso anticipato</span> e uno <span className='underline'>sconto speciale del 15%</span> sulla tua prima prenotazione.
+            Iscriviti gratuitamente alla nostra lista d&apos; attesa per ottenere <span className='underline'>l&apos; accesso anticipato</span> e uno <span className='underline'>sconto speciale del 15%</span> sulla tua prima prenotazione!
           </h2>
           <form
             className="flex flex-col items-start self-start gap-3"
@@ -234,20 +234,6 @@ export default function Home() {
               />
               <SignUpButton revertStyle={true} aria-label="Iscriviti gratuitamente alla newsletter" />
             </div>
-            <label className="text-white flex items-center gap-2" htmlFor="privacy">
-              <input
-                id="privacy"
-                type="checkbox"
-                name="privacy"
-                checked={privacyAccepted}
-                onChange={(e) => setPrivacyAccepted(e.target.checked)}
-                required
-                aria-required="true"
-              />
-              <div>
-                Accetto la <a href="https://www.iubenda.com/privacy-policy/25498782/legal" className="underline">Privacy Policy</a> e i <a href="https://www.iubenda.com/privacy-policy/25498782/cookie-policy" className="underline">Cookie Policy</a>.
-              </div>
-            </label>
           </form>
 
           {loading && !progressIsVisible && (
