@@ -89,7 +89,7 @@ export default function Home() {
     <>
       {/* Primo banner */}
     <div
-      style={{ borderTop: '1px solid white', height: '2.5rem' }}
+      style={{ borderTop: '1px solid white', height: '2.8rem' }}
       className="w-full bg-red-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
       role="banner"
       aria-label="Banner offering 15% discount on first booking"
@@ -101,22 +101,22 @@ export default function Home() {
         <p className="hidden lg:block" aria-hidden="true">Sconto del 15% sulla tua prima prenotazione!</p>
       </Link>
     </div>
-      {/* Secondo banner */}
-      <div
-        style={{ height: '2.5rem', top: '2.5rem' }}
-        className="w-full bg-yellow-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed z-50"
-        role="banner"
-        aria-label="Free waiting list banner"
-        onClick={handleBannerClick}
-      >
-        <Link href="#registrati" passHref className="flex justify-evenly w-full h-5">
-          <p className="hidden lg:block" aria-hidden="true">Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
-          <p>Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
-          <p className="hidden lg:block" aria-hidden="true">Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
-        </Link>
-      </div>
+    {/* Secondo banner */}
+    <div
+      style={{ height: '2.8rem', top: '2.5rem' }}
+      className="w-full bg-yellow-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed z-50"
+      role="banner"
+      aria-label="Free waiting list banner"
+      onClick={handleBannerClick}
+    >
+      <Link href="#registrati" passHref className="flex justify-evenly w-full h-5">
+        <p className="hidden lg:block" aria-hidden="true">Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
+        <p>Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
+        <p className="hidden lg:block" aria-hidden="true">Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
+      </Link>
+    </div>
 
-      <div style={{ paddingTop: '5rem' }}>
+    <div style={{ paddingTop: '5rem' }}>
         <NavBar />
       </div>
       <Section1 />
