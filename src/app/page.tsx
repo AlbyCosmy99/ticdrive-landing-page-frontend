@@ -17,8 +17,8 @@ export default function Home() {
   const [progressIsVisible, setProgressIsVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(3600); 
-  const [spotsLeft, setSpotsLeft] = useState(29); 
+  const [, setTimeLeft] = useState(3600); 
+  const [spotsLeft] = useState(29); 
   const router = useRouter();
   
   useEffect(() => {
@@ -26,13 +26,7 @@ export default function Home() {
       setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
     }, 1000);
     return () => clearInterval(timer);
-  }, []);
-
-  const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
-  };
+  }, [])
 
   const fetchData = async () => {
     setLoading(true);
