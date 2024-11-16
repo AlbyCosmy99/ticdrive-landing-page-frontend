@@ -3,7 +3,7 @@
 import NavBar from './components/Navbar';
 import SignUpButton from './components/SignUpButton';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import RegistrationConfirmation from './components/RegistrationConfirmation';
 import Section1 from './components/sections/Section1';
 import Section2 from './components/sections/Section2';
@@ -17,25 +17,8 @@ export default function Home() {
   const [progressIsVisible, setProgressIsVisible] = useState(false);
   const [loading, setLoading] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
-  const [, setTimeLeft] = useState(3600); 
-  const [spotsLeft, setSpotsLeft] = useState('--'); 
   const router = useRouter();
   
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
-    }, 1000);
-
-    const setSpotsLeftFunc = async () => {
-      const res = await fetch('https://landing-page-users-ticdrive-backend.onrender.com/api/mail')
-      const emails = await res.json()
-      setSpotsLeft((100 - emails.length).toString())
-    }
-    
-    setSpotsLeftFunc()
-    return () => clearInterval(timer);
-  }, [])
-
   const sendEmail = async () => {
     setLoading(true);
     try {
@@ -130,7 +113,7 @@ export default function Home() {
       onClick={handleBannerClick}
     >
       <div className="w-full h-5 flex justify-center items-center">
-        <p className="lg:text-lg font-semibold">Iscriviti gratuitamente. Posti rimanenti: {spotsLeft} / 200</p>
+        <p className="lg:text-lg font-semibold">Iscriviti gratuitamente. Posti limitati.</p>
       </div>
     </Link>
 
