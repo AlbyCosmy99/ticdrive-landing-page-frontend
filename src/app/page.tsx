@@ -18,7 +18,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [, setTimeLeft] = useState(3600); 
-  const [spotsLeft] = useState(29); 
+  const [spotsLeft] = useState(78); 
   const router = useRouter();
   
   useEffect(() => {
@@ -122,7 +122,7 @@ export default function Home() {
       onClick={handleBannerClick}
     >
       <div className="w-full h-5 flex justify-center items-center">
-        <p className="lg:text-lg font-semibold">Iscriviti gratuitamente. Posti rimanenti: {spotsLeft} / 100</p>
+        <p className="lg:text-lg font-semibold">Iscriviti gratuitamente. Posti rimanenti: {spotsLeft} / 200</p>
       </div>
     </Link>
 
