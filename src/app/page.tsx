@@ -16,7 +16,7 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [progressIsVisible, setProgressIsVisible] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [,setPrivacyAccepted] = useState(false);
   const router = useRouter();
   
   const sendEmail = async () => {
