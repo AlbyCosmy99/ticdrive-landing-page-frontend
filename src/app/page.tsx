@@ -18,17 +18,25 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [, setTimeLeft] = useState(3600); 
-  const [spotsLeft] = useState(78); 
+  const [spotsLeft, setSpotsLeft] = useState(78); 
   const router = useRouter();
   
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
     }, 1000);
+
+    const setSpotsLeftFunc = async () => {
+      const res = await fetch('https://landing-page-users-ticdrive-backend.onrender.com/api/mail')
+      const emails = await res.json()
+      setSpotsLeft(100 - emails.length)
+    }
+    
+    setSpotsLeftFunc()
     return () => clearInterval(timer);
   }, [])
 
-  const fetchData = async () => {
+  const sendEmail = async () => {
     setLoading(true);
     try {
       const res = await fetch(`https://landing-page-users-ticdrive-backend.onrender.com/api/mail/confirmation`, {
@@ -147,7 +155,7 @@ export default function Home() {
             className="flex flex-col items-start self-start gap-3"
             onSubmit={(event) => {
               event.preventDefault();
-              fetchData();
+              sendEmail();
               setEmail("");
               setPrivacyAccepted(false);
             }}
