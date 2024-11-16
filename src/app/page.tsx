@@ -132,7 +132,7 @@ export default function Home() {
 
      {/* Terzo banner */}
     <Link
-      style={{ borderTop: '1px solid white', height: '2.5rem', top: '5rem' }}
+      style={{ height: '2.5rem', top: '5rem' }}
       className="w-full bg-yellow-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
       role="banner"
       href="#registrati" passHref 
