@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import Script from 'next/script';
+import Image from 'next/image';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -56,9 +57,29 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             fbq('track', 'PageView');
           `}
         </Script>
+        
+        {/* Hotjar Tracking Code for Site TicDrive */}
+        <Script id="hotjar" strategy="afterInteractive">
+          {`
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:5210314,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `}
+        </Script>
+        
         <noscript>
-          <img height="1" width="1" style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=1290204491971799&ev=PageView&noscript=1"
+          <Image 
+            height={1} 
+            width={1} 
+            style={{ display: 'none' }} 
+            src="https://www.facebook.com/tr?id=1290204491971799&ev=PageView&noscript=1" 
+            alt="Facebook Pixel Noscript Tracking"
+            unoptimized 
           />
         </noscript>
         <SpeedInsights />
