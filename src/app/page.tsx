@@ -87,21 +87,36 @@ export default function Home() {
   
   return (
     <>
+      {/* Primo banner */}
+    <div
+      style={{ borderTop: '1px solid white', height: '2.5rem' }}
+      className="w-full bg-red-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
+      role="banner"
+      aria-label="Banner offering 15% discount on first booking"
+      onClick={handleBannerClick}
+    >
+      <Link href="#registrati" passHref className="flex justify-evenly w-full h-5">
+        <p className="hidden lg:block" aria-hidden="true">Sconto del 15% sulla tua prima prenotazione!</p>
+        <p>Sconto del 15% sulla tua prima prenotazione!</p>
+        <p className="hidden lg:block" aria-hidden="true">Sconto del 15% sulla tua prima prenotazione!</p>
+      </Link>
+    </div>
+      {/* Secondo banner */}
       <div
-        style={{ borderTop: '1px solid white', height: '2.5rem' }}
-        className="w-full bg-red-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
+        style={{ height: '2.5rem', top: '2.5rem' }}
+        className="w-full bg-yellow-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed z-50"
         role="banner"
-        aria-label="Banner offering 15% discount on first booking"
+        aria-label="Free waiting list banner"
         onClick={handleBannerClick}
       >
         <Link href="#registrati" passHref className="flex justify-evenly w-full h-5">
-          <p className="hidden lg:block" aria-hidden="true">Sconto del 15% sulla tua prima prenotazione!</p>
-          <p>Sconto del 15% sulla tua prima prenotazione!</p>
-          <p className="hidden lg:block" aria-hidden="true">Sconto del 15% sulla tua prima prenotazione!</p>
+          <p className="hidden lg:block" aria-hidden="true">Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
+          <p>Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
+          <p className="hidden lg:block" aria-hidden="true">Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
         </Link>
       </div>
 
-      <div style={{ paddingTop: '2.5rem' }}>
+      <div style={{ paddingTop: '5rem' }}>
         <NavBar />
       </div>
       <Section1 />
@@ -114,7 +129,7 @@ export default function Home() {
         aria-labelledby="signup-heading"
       >
         <h2 id="signup-heading" className="text-white text-3xl lg:text-4xl font-bold lg:pr-40">
-          Iscriviti ora per ottenere l&apos; accesso anticipato e ricevere uno sconto speciale del 15% sulla tua prima prenotazione.
+          Iscriviti gratuitamente alla nostra newsletter per ottenere l&apos; accesso anticipato e uno sconto speciale del 15% sulla tua prima prenotazione.
         </h2>
         <form
           className="flex flex-col items-start self-start gap-3"
@@ -139,7 +154,7 @@ export default function Home() {
               aria-required="true"
               onClick={handleGoogleAnalyticsEmailClick}
             />
-            <SignUpButton revertStyle={true} aria-label="Conferma iscrizione" />
+            <SignUpButton revertStyle={true} aria-label="Iscriviti gratuitamente alla newsletter" />
           </div>
           <label className="text-white flex items-center gap-2" htmlFor="privacy">
             <input

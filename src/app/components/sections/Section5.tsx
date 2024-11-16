@@ -12,8 +12,8 @@ const Section5 = () => {
             Vuoi essere il primo a scoprire l&apos; app?
           </h2>
           <p className="text-white text-xl lg:text-2xl lg:pr-40">
-            Iscriviti ora per ottenere l&apos; accesso anticipato e ricevere uno
-            sconto speciale del 15% sulla tua prima prenotazione.
+            Iscriviti gratuitamente alla nostra newsletter per ottenere l&apos; 
+            accesso anticipato e uno sconto speciale del 15% sulla tua prima prenotazione.
           </p>
           <Link className="self-start" href="#registrati" passHref>
             <SignUpButton revertStyle={true} />
