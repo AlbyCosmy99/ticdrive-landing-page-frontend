@@ -122,22 +122,24 @@ export default function Home() {
     {/* Secondo banner */}
     <Link
       style={{ height: '3rem', top: '2.5rem' }} 
-      className="w-full bg-red-500 text-white font-bold text-sm text-center lg:p-2 lg:items-center flex justify-evenly  fixed z-50"
+      className="w-full bg-yellow-500 text-white font-bold text-sm text-center lg:p-2 lg:items-center flex justify-evenly  fixed z-50"
       role="banner"
       href="#registrati"
       passHref
       aria-label="Free waiting list banner"
       onClick={handleBannerClick}
     >
-      <div className="text-center text-white flex justify-center items-center">
-        <p className="text-lg font-semibold">Offerta scade tra: {formatTime(timeLeft)}</p>
+      <div className="flex justify-evenly w-full h-5">
+          <p className="hidden lg:block" aria-hidden="true">Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
+          <p>Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
+          <p className="hidden lg:block" aria-hidden="true">Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
       </div>
     </Link>
 
      {/* Terzo banner */}
     <Link
       style={{ borderTop: '1px solid white', height: '2.5rem', top: '5rem' }}
-      className="w-full bg-slate-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
+      className="w-full bg-yellow-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
       role="banner"
       href="#registrati" passHref 
       aria-label="Banner offering 15% discount on first booking"
