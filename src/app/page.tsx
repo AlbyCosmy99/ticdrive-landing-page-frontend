@@ -18,7 +18,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [, setTimeLeft] = useState(3600); 
-  const [spotsLeft, setSpotsLeft] = useState('-'); 
+  const [spotsLeft, setSpotsLeft] = useState('--'); 
   const router = useRouter();
   
   useEffect(() => {
