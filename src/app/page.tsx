@@ -103,8 +103,8 @@ export default function Home() {
     </div>
     {/* Secondo banner */}
     <div
-      style={{ height: '2.5rem', top: '2.5rem' }}
-      className="w-full bg-yellow-500 text-white font-bold text-sm text-center p-2 flex justify-evenly  fixed z-50"
+      style={{ height: '2.5rem', top: '2.5rem' }} 
+      className="w-full bg-yellow-500 text-white font-bold text-sm text-center p-2 flex justify-evenly lg:items-center fixed z-50"
       role="banner"
       aria-label="Free waiting list banner"
       onClick={handleBannerClick}
