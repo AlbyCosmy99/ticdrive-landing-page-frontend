@@ -112,27 +112,9 @@ export default function Home() {
         <p className="hidden lg:block" aria-hidden="true">Sconto del 15% sulla tua prima prenotazione!</p>
       </div>
     </Link>
-
-    {/* Secondo banner */}
-    <Link
-      style={{ height: '3rem', top: '2.5rem' }} 
-      className="w-full bg-yellow-500 text-white font-bold text-sm text-center lg:p-2 lg:items-center flex justify-evenly  fixed z-50"
-      role="banner"
-      href="#registrati"
-      passHref
-      aria-label="Free waiting list banner"
-      onClick={handleBannerClick}
-    >
-      <div className="flex justify-evenly w-full h-5">
-          <p className="hidden lg:block" aria-hidden="true">Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
-          <p>Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
-          <p className="hidden lg:block" aria-hidden="true">Entra gratuitamente nella lista d&apos; attesa per vantaggi esclusivi!</p>
-      </div>
-    </Link>
-
      {/* Terzo banner */}
     <Link
-      style={{ height: '2.5rem', top: '5rem' }}
+      style={{ height: '2.5rem', top: '2.5rem' }}
       className="w-full bg-yellow-500 text-white font-bold text-sm text-center p-2 flex justify-evenly items-center fixed top-0 z-50"
       role="banner"
       href="#registrati" passHref 
@@ -144,7 +126,7 @@ export default function Home() {
       </div>
     </Link>
 
-    <div style={{ paddingTop: '7.5rem' }}>
+    <div style={{ paddingTop: '5rem' }}>
         <NavBar />
       </div>
       <Section1 />
