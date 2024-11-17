@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Section4 = () => {
     return (
-        <section
+      <section
         id="comeFunziona"
         className="min-h-screen flex flex-col justify-center items-center gap-12 mt-12"
       >

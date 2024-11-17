@@ -9,11 +9,11 @@ const Section5 = () => {
       >
         <div className="self-center flex flex-col gap-6">
           <h2 className="font-bold text-2xl lg:text-5xl text-white">
-            Vuoi essere il primo a scoprire l&apos; app?
+            Vuoi essere avvisato quando esce l&apos; app?
           </h2>
           <p className="text-white text-xl lg:text-2xl lg:pr-40">
-            Iscriviti gratuitamente alla nostra newsletter per ottenere l&apos; 
-            accesso anticipato e uno sconto speciale del 15% sulla tua prima prenotazione.
+            Iscriviti gratuitamente alla nostra lista d&apos; attesa. <br></br
+            >Ricevi inoltre uno sconto speciale del 15% sulla tua prima prenotazione.
           </p>
           <Link className="self-start" href="#registrati" passHref>
             <SignUpButton revertStyle={true} />
