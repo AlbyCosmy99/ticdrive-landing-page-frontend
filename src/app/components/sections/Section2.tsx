@@ -7,7 +7,7 @@ const Section2 = () => {
     return (
         <section
         id="section2"
-        className="flex flex-col lg:flex-row justify-center items-center lg:m-12 lg:mx-24 min-h-screen m-8 mt-12"
+        className="flex flex-col lg:flex-row justify-evenly items-center lg:m-12 lg:mx-24 min-h-screen m-8 mt-12"
       >
         <div className="flex gap-4 flex-col">
           <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl text-center">
