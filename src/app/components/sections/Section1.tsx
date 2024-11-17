@@ -15,7 +15,7 @@ const Section1: React.FC = () => {
           <h1 style={{lineHeight: 'normal'}} className="text-3xl lg:text-6xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2 mt-4">
             E se potessi prenotare la manutenzione auto comodamente dal tuo cellulare?
           </h1>
-          <h2 className='text-xl lg:text-4xl mt-3'>Nelle migliori officine autorizzate su tutto il territorio italiano.</h2>
+          <h2 className='text-2xl lg:text-4xl mt-3'>Nelle migliori officine autorizzate su tutto il territorio italiano.</h2>
           <h3 className='text-xl lg:text-4xl mt-3'><Link href='#registrati' passHref>Scorri per scoprire come!</Link></h3>
         </div>
         <div className="flex justify-center items-center mt-4 mx-4 lg:mt-14 lg:mx-20 lg:mb-0">
