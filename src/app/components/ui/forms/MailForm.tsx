@@ -55,7 +55,7 @@ const MailForm = () => {
                         🎉 Oltre <span className="font-bold text-yellow-400">1000</span> iscritti! 🎉
                     </h3>
                     <h2 id="signup-heading" className="text-white text-2xl lg:text-4xl font-bold lg:pr-40">
-                        Iscriviti gratuitamente alla nostra lista d&apos; attesa per ottenere <span className='underline'>l&apos; accesso anticipato</span> e uno <span className='underline'>sconto speciale del 15%</span> sulla tua prima prenotazione!
+                        Iscriviti gratuitamente alla nostra lista d&apos; attesa per rimanere aggiornato e ottenere uno <span className='underline'>sconto speciale del 15%</span> sulla tua prima prenotazione!
                     </h2>
                     <div className="text-white self-start">
                         <h3 className="text-xl">Sconto valido per un servizio qualsiasi. Tagliando, allineamento gomme, cambio olio, ecc. <span className="underline">Scegli tu</span>!</h3>
