@@ -57,6 +57,7 @@ const MailForm = () => {
                     <h2 id="signup-heading" className="text-white text-2xl lg:text-4xl font-bold lg:pr-40">
                         Iscriviti gratuitamente alla nostra lista d&apos; attesa per rimanere aggiornato e ottenere uno <span className='underline'>sconto speciale del 15%</span> sulla tua prima prenotazione!
                     </h2>
+                    <h2>Nelle migliori officine autorizzate su tutto il territorio italiano!</h2>
                     <div className="text-white self-start">
                         <h3 className="text-xl">Sconto valido per un servizio qualsiasi. Tagliando, allineamento gomme, cambio olio, ecc. <span className="underline">Scegli tu</span>!</h3>
                     </div>
