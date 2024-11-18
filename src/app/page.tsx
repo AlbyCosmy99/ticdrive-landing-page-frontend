@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Section5 from './components/sections/Section5';
 import Section4 from './components/sections/Section4';
 import MailForm from './components/ui/forms/MailForm';
+// import LikingSurvey from './components/Surveys/LikingSurvey';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Section1 />
       <MailForm />
       <Section4 />
+      {/* <LikingSurvey /> */}
       <MailForm />
       <Section2 />
       <Section5 />

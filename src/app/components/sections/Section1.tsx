@@ -13,7 +13,7 @@ const Section1: React.FC = () => {
       <main className="flex flex-col justify-between items-center gap-4 lg:gap-2 flex-1 text-center text-white text-lg p-8 pb-0">
         <div>
           <h1 style={{lineHeight: 'normal'}} className="text-3xl lg:text-6xl font-bold text-white leading-tight lg:flex lg:justify-center lg:items-center lg:flex-col lg:gap-2 mt-4">
-            E se potessi prenotare la <span className='underline'>manutenzione auto</span> comodamente dal tuo cellulare?
+            E se potessi prenotare la manutenzione auto comodamente dal tuo cellulare?
           </h1>
           <h2 className='text-xl lg:text-4xl mt-3'>Stiamo per lanciare un&apos; applicazione!</h2>
           <h3 className='text-xl lg:text-4xl mt-1'><Link href='#registrati' passHref>Scorri per scoprire di più!</Link></h3>
