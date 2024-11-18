@@ -18,7 +18,7 @@ const Section5 = () => {
           <Link className="self-start" href="#registrati" passHref>
             <SignUpButton revertStyle={true} />
           </Link>
-          <Link href='#comeFunziona' passHref className="underline text-white">
+          <Link href='#comeFunziona' passHref className="underline text-white ml-1">
             Non sono convinto
           </Link>
         </div>
