@@ -60,7 +60,7 @@ const MailForm = () => {
                     <div className="text-white self-start">
                         <h3 className="text-xl">Sconto valido per un servizio qualsiasi. Tagliando, allineamento gomme, cambio olio, ecc. <span className="underline">Scegli tu</span>!</h3>
                         <h4>
-                            Hai dubbi? Scrivici al{" "}
+                            Hai dubbi? Scrivici su{" "}
                             <a href="mailto:infoticdrive@gmail.com" className="underline underline-offset-2">
                                 infoticdrive@gmail.com
                             </a>
