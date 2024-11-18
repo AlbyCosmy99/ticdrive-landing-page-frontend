@@ -51,7 +51,7 @@ const MailForm = () => {
             aria-labelledby="signup-heading"
             >
                 <div className={`bg-drive w-full h-100 flex flex-col justify-center items-center p-8 ${progressIsVisible && 'lg:pb-10'} lg:p-20 lg:pr-80 gap-6 lg:pl-40`}>
-                    <h3 className="text-3xl lg:text-5xl pt-2 text-white bg-drive self-start underline">Oltre 1000 iscritti!</h3>
+                    <h3 className="text-3xl lg:text-5xl pt-2 text-white bg-drive self-start uppercase">Oltre 1000 iscritti!</h3>
                     <h2 id="signup-heading" className="text-white text-2xl lg:text-4xl font-bold lg:pr-40">
                         Iscriviti gratuitamente alla nostra lista d&apos; attesa per ottenere <span className='underline'>l&apos; accesso anticipato</span> e uno <span className='underline'>sconto speciale del 15%</span> sulla tua prima prenotazione!
                     </h2>
