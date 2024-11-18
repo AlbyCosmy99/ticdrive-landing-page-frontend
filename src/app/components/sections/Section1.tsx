@@ -19,7 +19,7 @@ const Section1: React.FC = () => {
             <h2>Stiamo per lanciare un&apos; applicazione!</h2>
             <h2>Valida su tutto il territorio italiano.</h2>
           </div>
-          <h3 className='text-xl lg:text-4xl mt-1'><Link href='#registrati' passHref>Scorri per scoprire di più!</Link></h3>
+          <h3 className='text-xl lg:text-4xl mt-6'><Link href='#registrati' passHref>Scorri per scoprire di più!</Link></h3>
         </div>
         <div className="flex justify-center items-center mt-4 mx-4 lg:mt-14 lg:mx-20 lg:mb-0">
           <div className="hidden lg:block max-lg:hidden">
