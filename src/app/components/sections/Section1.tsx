@@ -16,7 +16,7 @@ const Section1: React.FC = () => {
             E se potessi prenotare la manutenzione auto comodamente dal tuo cellulare?
           </h1>
           <h2 className='text-xl lg:text-4xl mt-3'>Stiamo per lanciare un&apos; applicazione!</h2>
-          <h3 className='text-xl lg:text-4xl mt-3'><Link href='#registrati' passHref>Scorri per scoprire di più!</Link></h3>
+          <h3 className='text-xl lg:text-4xl mt-1'><Link href='#registrati' passHref>Scorri per scoprire di più!</Link></h3>
         </div>
         <div className="flex justify-center items-center mt-4 mx-4 lg:mt-14 lg:mx-20 lg:mb-0">
           <div className="hidden lg:block max-lg:hidden">
