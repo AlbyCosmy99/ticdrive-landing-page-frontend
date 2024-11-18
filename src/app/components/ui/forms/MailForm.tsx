@@ -60,7 +60,7 @@ const MailForm = () => {
                     <div className="text-white self-start">
                         <h3 className="text-xl">Sconto valido per un servizio qualsiasi. Tagliando, allineamento gomme, cambio olio, ecc. <span className="underline">Scegli tu</span>!</h3>
                     </div>
-                    <div className="text-white">
+                    {/* <div className="text-white">
                         <h4>
                             Hai dubbi? Scrivici su{" "}
                             <a href="mailto:infoticdrive@gmail.com" className="underline underline-offset-2">
@@ -69,7 +69,7 @@ const MailForm = () => {
                             !
                         </h4>
                         <h4>Rispondiamo in meno di 10 minuti.</h4>
-                    </div>
+                    </div> */}
                     <form
                         className="flex flex-col items-start self-start gap-3"
                         onSubmit={(event) => {
