@@ -22,6 +22,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: 'TicDrive',
   description: 'Trova la Migliore Officina Vicino a Te in Pochi Click: Confronta i prezzi, leggi le recensioni e prenota facilmente e in modo trasparente i servizi di manutenzione e riparazione auto.',
+  icons: {
+    icon: './favicon.ico'
+  },
 };
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -41,7 +44,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             gtag('config', 'G-CEHL3QKF3T');
           `}
         </Script>
-  
+
         {/* Meta Pixel Code */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
@@ -57,7 +60,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             fbq('track', 'PageView');
           `}
         </Script>
-        
+
         {/* Hotjar Tracking Code for Site TicDrive */}
         <Script id="hotjar" strategy="afterInteractive">
           {`
@@ -71,15 +74,15 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
           `}
         </Script>
-        
+
         <noscript>
-          <Image 
-            height={1} 
-            width={1} 
-            style={{ display: 'none' }} 
-            src="https://www.facebook.com/tr?id=1290204491971799&ev=PageView&noscript=1" 
+          <Image
+            height={1}
+            width={1}
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1290204491971799&ev=PageView&noscript=1"
             alt="Facebook Pixel Noscript Tracking"
-            unoptimized 
+            unoptimized
           />
         </noscript>
         <SpeedInsights />
