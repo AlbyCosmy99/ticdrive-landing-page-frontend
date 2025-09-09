@@ -46,6 +46,6 @@ The project uses modern frontend + backend technologies:
 ---
 
 ## 📸 Preview
-![Spine Project Screenshot](assets/screenshot.png)
+![Screenshot1](assets/screenshots/screenshot1.png)
 
 ---
