@@ -29,8 +29,8 @@ The project uses modern frontend + backend technologies:
   - Node.js / Express API for receiving **emails** from landing page forms  
   - Integration with mailing service (contact form submissions)
   - MongoDB for storage
-- **[Analytics](https://analytics.google.com) & Marketing**:
-  - Google Analytics
+- **Analytics & Marketing**:
+  - [Google Analytics](https://analytics.google.com)
   - Meta Pixel (Facebook Ads)  
   - [Hotjar](https://www.hotjar.com) (UX heatmaps & recordings)  
   - Vercel Analytics & Speed Insights  
