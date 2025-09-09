@@ -1,6 +1,6 @@
 # TicDrive - Landing Page 🚗⚡
 
-TicDrive is a **landing page with backend integration**, created to promote the TicDrive project in the automotive sector.  
+A **landing page with backend integration**, created to promote the TicDrive project in the automotive sector.  
 The website has been designed to be **clean, professional and responsive**, while also including **lead generation via email backend** and **analytics for marketing campaigns**.  
 
 This landing page was launched in **November 2024** with a **Facebook Ads campaign**, supported by Google Analytics, Meta Pixel, Hotjar and Vercel Analytics for performance and conversion tracking.  
@@ -46,6 +46,6 @@ The project uses modern frontend + backend technologies:
 ---
 
 ## 📸 Preview
-_Add screenshots or live demo link here (e.g. Vercel or custom domain)_  
+![Spine Project Screenshot](assets/screenshot.png)
 
 ---
