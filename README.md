@@ -5,7 +5,7 @@ The website has been designed to be **clean, professional and responsive**, whil
 
 This landing page was launched in **November 2024** with a **Facebook Ads campaign**, supported by Google Analytics, Meta Pixel, Hotjar and Vercel Analytics for performance and conversion tracking.  
 
-View site [here](https://www.utenti-ticdrive.it)
+View site [here](https://www.utenti-ticdrive.it).
 
 ---
 
