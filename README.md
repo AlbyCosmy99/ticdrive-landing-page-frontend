@@ -47,5 +47,6 @@ The project uses modern frontend + backend technologies:
 
 ## 📸 Preview
 ![Screenshot1](assets/screenshots/screenshot1.png)
-
----
+![Screenshot1](assets/screenshots/screenshot2.png)
+![Screenshot1](assets/screenshots/screenshot3.png)
+![Screenshot1](assets/screenshots/screenshot4.png)
