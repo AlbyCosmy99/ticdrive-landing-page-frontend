@@ -5,6 +5,8 @@ The website has been designed to be **clean, professional and responsive**, whil
 
 This landing page was launched in **November 2024** with a **Facebook Ads campaign**, supported by Google Analytics, Meta Pixel, Hotjar and Vercel Analytics for performance and conversion tracking.  
 
+View site [here](https://www.utenti-ticdrive.it)
+
 ---
 
 ## 📖 Project Overview
@@ -21,16 +23,16 @@ The project uses modern frontend + backend technologies:
 - **Frontend**:
   - [Next.js](https://nextjs.org/) (React framework)  
   - **TypeScript** for type safety  
-  - **CSS3 / Tailwind / Custom styles**  
+  - **CSS3 / [Tailwind](https://tailwindcss.com/) / Custom styles**  
   - **Responsive Design** for mobile/desktop  
 - **Backend**:
   - Node.js / Express API for receiving **emails** from landing page forms  
   - Integration with mailing service (contact form submissions)
   - MongoDB for storage
-- **Analytics & Marketing**:
-  - Google Analytics (G-CEHL3QKF3T)  
+- **[Analytics](https://analytics.google.com) & Marketing**:
+  - Google Analytics
   - Meta Pixel (Facebook Ads)  
-  - Hotjar (UX heatmaps & recordings)  
+  - [Hotjar](https://www.hotjar.com) (UX heatmaps & recordings)  
   - Vercel Analytics & Speed Insights  
 
 ---
