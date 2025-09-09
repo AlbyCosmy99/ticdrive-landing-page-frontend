@@ -6,7 +6,7 @@ The website has been designed to be **clean, professional and responsive**, whil
 This landing page was launched in **November 2024** with a **Facebook Ads campaign**, supported by Google Analytics, Meta Pixel, Hotjar and Vercel Analytics for performance and conversion tracking.  
 
 View site [here](https://www.utenti-ticdrive.it). <br>
-Download the [IOS](https://apps.apple.com/it/app/ticdrive/id6740627366?l=en-GB) and Android version of TicDrive app.
+Download the [IOS](https://apps.apple.com/it/app/ticdrive/id6740627366?l=en-GB) and [Android](https://play.google.com/store/apps/details?id=com.ticdrive.app&pcampaignid=web_share) version of TicDrive app.
 
 ---
 
