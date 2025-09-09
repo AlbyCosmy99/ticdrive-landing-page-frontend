@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TicDrive - Landing Page 🚗⚡
 
-## Getting Started
+TicDrive is a **landing page with backend integration**, created to promote the TicDrive project in the automotive sector.  
+The website has been designed to be **clean, professional and responsive**, while also including **lead generation via email backend** and **analytics for marketing campaigns**.  
 
-First, run the development server:
+This landing page was launched in **November 2024** with a **Facebook Ads campaign**, supported by Google Analytics, Meta Pixel, Hotjar and Vercel Analytics for performance and conversion tracking.  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📖 Project Overview
+- 🌍 **Type**: Landing page + backend (email collection & analytics)  
+- 🎯 **Purpose**: Startup launching
+- 📅 **Launched**: November 2024 (Facebook Ads campaign)  
+- 🏗️ **Developed by**: Andrei Albu 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
+The project uses modern frontend + backend technologies:
 
-## Learn More
+- **Frontend**:
+  - [Next.js](https://nextjs.org/) (React framework)  
+  - **TypeScript** for type safety  
+  - **CSS3 / Tailwind / Custom styles**  
+  - **Responsive Design** for mobile/desktop  
+- **Backend**:
+  - Node.js / Express API for receiving **emails** from landing page forms  
+  - Integration with mailing service (contact form submissions)  
+- **Analytics & Marketing**:
+  - Google Analytics (G-CEHL3QKF3T)  
+  - Meta Pixel (Facebook Ads)  
+  - Hotjar (UX heatmaps & recordings)  
+  - Vercel Analytics & Speed Insights  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Features
+- ✅ **Hero section** with strong CTA  
+- ✅ **About & Services** sections explaining TicDrive’s mission  
+- ✅ **Call-to-Action** with email form → connected to backend  
+- ✅ **Responsive navbar & design**  
+- ✅ **Google Analytics + Meta Pixel + Hotjar** tracking  
+- ✅ **Launched campaign tested with Facebook Ads (Nov 2024)**  
+- ✅ **Performance monitoring** with Vercel Speed Insights  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📸 Preview
+_Add screenshots or live demo link here (e.g. Vercel or custom domain)_  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
