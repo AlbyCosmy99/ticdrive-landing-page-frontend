@@ -25,7 +25,8 @@ The project uses modern frontend + backend technologies:
   - **Responsive Design** for mobile/desktop  
 - **Backend**:
   - Node.js / Express API for receiving **emails** from landing page forms  
-  - Integration with mailing service (contact form submissions)  
+  - Integration with mailing service (contact form submissions)
+  - MongoDB for storage
 - **Analytics & Marketing**:
   - Google Analytics (G-CEHL3QKF3T)  
   - Meta Pixel (Facebook Ads)  
